@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'Conv_Quicksand-Bold';
+	src: url('/assets/fonts/Quicksand-Bold/quicksand.bold-regular.eot');
+    src: local('☺'), url('/assets/fonts/Quicksand-Bold/quicksand.bold-regular.woff') format('woff'), 
+                     url('/assets/fonts/Quicksand-Bold/quicksand.bold-regular.ttf') format('truetype'), 
+                     url('/assets/fonts/Quicksand-Bold/quicksand.bold-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import "variables";
+h1 {
+    font-family: 'Conv_Quicksand-Bold';
+    color: $DarkShade100;
+}
