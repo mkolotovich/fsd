@@ -1,0 +1,44 @@
+@import '~scss/variables.scss';
+.preview-text-field {
+  list-style: none;
+  margin-top: 65px;
+}
+.preview-text-field__item {
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+.preview-text-field__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.preview-text-field__item-name, .preview-text-field__item-style {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark;
+}
+.preview-text-field__item-style {
+  color: $dark50;
+}
+.preview-text-field__item-input {
+  width: 100%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  min-height: 44px;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.preview-text-field__item-input:hover, .preview-text-field__item-input:focus {
+  border-color: $dark50;
+  outline: none;
+  line-height: 24px;
+}
+.preview-text-field__item-input:hover::placeholder, .preview-text-field__item-input:focus::placeholder {
+  color: $dark75;
+}
+.preview-text-field__item-input::placeholder {
+  font-family: 'Montserrat';
+  color: $dark25;
+}

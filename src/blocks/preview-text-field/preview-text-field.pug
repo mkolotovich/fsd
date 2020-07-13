@@ -1,0 +1,10 @@
+mixin preview-text-field(name, style)
+  li.preview-text-field__item 
+    .preview-text-field__wrap 
+      b.preview-text-field__item-name Text Field
+      span.preview-text-field__item-style= name
+    input(class='preview-text-field__item-input' placeholder= style)
+
+ul.preview-text-field
+  +preview-text-field('Default', 'Email')
+  +preview-text-field('Hover / Focus', 'This is pretty awesome')
