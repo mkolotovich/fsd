@@ -1,0 +1,17 @@
+@import './variables.scss';
+:root {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  font-size: $rem+px;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: bottom;
+}

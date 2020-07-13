@@ -1,1 +1,29 @@
-$DarkShade100: #1F2041;
+$rem: 16;
+$padding: 20px;
+
+@function rem($fsz) {
+  @return ($fsz/$rem) + rem;
+}
+
+// Breakpoints
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xxl: 1440px;
+
+// Colors
+$dark: #1f2041;
+$dark75: rgba(31, 32, 65, 0.75);
+$dark50: rgba(31, 32, 65, 0.5);
+$dark25: rgba(31, 32, 65, 0.25);
+$dark5: rgba(31, 32, 65, 0.05);
+$purple: #bc9cff;
+$green: #6fcf97;
+$white: #ffffff;
+
+// Fonts
+$font-lg: rem(24);
+$font-md: rem(19);
+$font-sm: rem(12);
+$font: rem(14);
