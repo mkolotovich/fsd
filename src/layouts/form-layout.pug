@@ -2,13 +2,12 @@ include ../blocks/container/container.pug
 include ../blocks/logo/logo.pug
 doctype html
 html
-    head
-        meta(charset = 'utf-8')
-        meta(name='viewport', content="initial-scale=1.0, width=device-width")
-        title
-            block title
-    body
-        +container({mod:'outer'})
-        +logo({'mod': 'ui-kit', 'image':'logo-gray.svg'})
-        +container
-            block content
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    title
+      block title
+  body
+    +logo({'mod': 'ui-kit', 'image':'logo-gray.svg'})
+    +container
+      block content

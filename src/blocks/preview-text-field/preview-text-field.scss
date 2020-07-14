@@ -1,4 +1,5 @@
 @import '~scss/variables.scss';
+@import '~scss/mixins.scss';
 .preview-text-field {
   list-style: none;
   margin-top: 65px;
@@ -6,11 +7,33 @@
 .preview-text-field__item {
   max-width: 320px;
   margin-bottom: 20px;
+  position: relative;
+}
+.preview-text-field__item_half-width {
+  min-width: 150px;
+}
+.preview-text-field__item:nth-child(n+4) {
+  margin-bottom: 40px;
+}
+.preview-text-field__item:nth-child(7) {
+  margin-bottom: 100px;
+}
+.preview-text-field__item:nth-child(8) .preview-text-field__item-input {
+  border-radius: 2px;
+}
+.preview-text-field__item:nth-child(8) .material-icons {
+  color: $dark75;
+}
+.preview-text-field__list {
+  list-style: none;
+  @include flex-between;
 }
 .preview-text-field__wrap {
-  display: flex;
-  justify-content: space-between;
+  @include flex-between;
   margin-bottom: 5px;
+}
+.preview-text-field__list .preview-text-field__item{
+  margin-bottom: 0;
 }
 .preview-text-field__item-name, .preview-text-field__item-style {
   font-size: 12px;
@@ -23,12 +46,14 @@
 }
 .preview-text-field__item-input {
   width: 100%;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $dark25;
   border-radius: 4px;
   min-height: 44px;
   padding-left: 15px;
   font-size: 14px;
   line-height: 18px;
+  font-family: 'Montserrat';
+  -webkit-appearance: none;
 }
 .preview-text-field__item-input:hover, .preview-text-field__item-input:focus {
   border-color: $dark50;
@@ -41,4 +66,13 @@
 .preview-text-field__item-input::placeholder {
   font-family: 'Montserrat';
   color: $dark25;
+}
+.preview-text-field_item__two-third-width {
+  max-width: 266px;
+}
+.preview-text-field_item__two-third-width .preview-text-field__item-input{
+  background-color: transparent;
+}
+.preview-text-field_item__two-third-width:nth-child(7) .material-icons {
+  color: $purple;
 }
