@@ -8,7 +8,7 @@ mixin preview-text-field(name, style, placeholder)
 
 ul.preview-text-field
   +preview-text-field('Text Field', 'Default', 'Email')(class="preview-text-field__item")
-  +preview-text-field('Text Field', 'Hover / Focus', 'This is pretty awesome')(class="preview-text-field__item")
+  +preview-text-field('Text Field', 'Hover / Focus', 'This is pretty awesome')(class="preview-text-field__item preview-text-field__item_hover")
   include ../dropdown/dropdown.pug
   +preview-text-field('masked text field', 'Default', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
   li.preview-text-field__item
@@ -16,5 +16,6 @@ ul.preview-text-field
       +dropdown('date Dropdown', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
       +dropdown('date Dropdown', '', '19.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
   +dropdown('filter date dropdown', '', '19 авг - 23 авг')(class="preview-text-field__item preview-text-field_item__two-third-width")
-  +preview-text-field('subscription text field', '', 'Email')(class="preview-text-field__item preview-text-field_item__two-third-width")
-  +dropdown('dropdown', 'Default', '2 спальни, 2 кровати...')(class="preview-text-field__item preview-text-field_item__two-third-width")
+  +preview-text-field('subscription text field', '', 'Email')(class="preview-text-field__item preview-text-field_item__two-third-width preview-text-field_item__subscription")
+  +dropdown('dropdown', 'Default', '2 спальни, 2 кровати...')(class="preview-text-field__item preview-text-field_item__two-third-width preview-text-field_item__opacity75")
+  +dropdown('dropdown', 'expanded', '2 спальни, 2 кровати...')(class="preview-text-field__item preview-text-field_item__two-third-width preview-text-field_item__opacity75")
