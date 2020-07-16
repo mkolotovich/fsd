@@ -1,4 +1,4 @@
-mixin dropdown(name, style, value)
+mixin dropdown(name, style, value, value1, value2, value3)
   li(class!=attributes.class)
     i(class='material-icons') expand_more
     .preview-text-field__wrap 
@@ -6,5 +6,7 @@ mixin dropdown(name, style, value)
       span.preview-text-field__item-style= style
     select(class='preview-text-field__item-input preview-text-field__item-input_dropdown js-example-basic-single' name="state")
       option(value=value)=value
-
+      option(value=value1)=value1
+      option(value=value2)=value2
+      option(value=value3)=value3
 +dropdown('Dropdown', 'Default', 'Сколько гостей')(class="preview-text-field__item")
