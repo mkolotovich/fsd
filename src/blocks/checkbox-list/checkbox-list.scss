@@ -1,0 +1,10 @@
+.preview-text-field__item_checkbox-list .select2 {
+  display: none;
+}
+.preview-text-field__item_checkbox-list .preview-text-field__wrap {
+  min-height: 44px;
+  align-items: center;
+}
+.preview-text-field__item_checkbox-list-open .select2 {
+  display: inline-block;
+}

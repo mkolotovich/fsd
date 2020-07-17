@@ -3,19 +3,21 @@ import 'select2';
 
 $(document).ready(function() {
   $('.js-example-basic-single').select2();
-  $('.preview-text-field_item__open .preview-text-field__item-input').select2({
+
+  function formatState (state) {
+    if (!state.id) {
+      return state.text;
+    }
+    var $state = $(
+      '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
+    );
+    return $state;
+  };
+  
+  $(".preview-text-field__item_open .preview-text-field__item-input").select2({
     placeholder: "2 спальни, 2 кровати...",
+    templateResult: formatState
   });
 
-  $('.preview-text-field_item__open .preview-text-field__item-input').select2('open');
-
-  let dropdownItem = document.querySelector(".select2-results__option:nth-child(1)");
-  let buttonWrapper = document.createElement("div");
-  buttonWrapper.classList.add('dropdown');
-
-  let newButton = document.createElement("button");
-  newButton.classList.add('dropdown__button');
-  newButton.innerHTML = "-";
-  buttonWrapper.appendChild(newButton);
-  dropdownItem.appendChild(buttonWrapper);
+  $('.preview-text-field__item_open .preview-text-field__item-input').select2('open');
 });
