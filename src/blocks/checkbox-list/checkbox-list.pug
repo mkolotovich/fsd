@@ -1,4 +1,4 @@
-mixin checkbox-list(name, style, label, label1, value1, label2, value2, label3, value3)
+mixin checkbox-list(name, style, label, label1, value1, label2, value2, label3, value3, label4, label5)
   li(class!=attributes.class)
     i(class='material-icons') expand_more
     .preview-text-field__wrap 
@@ -9,3 +9,5 @@ mixin checkbox-list(name, style, label, label1, value1, label2, value2, label3, 
       option(label=label1 value=value1)=label1
       option(label=label2 value=value2)=label2
       option(label=label3 value=value3)=label3
+      option(value=label4)=label4
+      option(value=label5)=label5
