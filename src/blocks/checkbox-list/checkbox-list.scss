@@ -1,10 +1,42 @@
-.preview-text-field__item_checkbox-list .select2 {
-  display: none;
-}
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
 .preview-text-field__item_checkbox-list .preview-text-field__wrap {
   min-height: 44px;
   align-items: center;
 }
-.preview-text-field__item_checkbox-list-open .select2 {
-  display: inline-block;
+.preview-text-field__item_checkbox-list-open .material-icons {
+  top: 0;
+  transform: rotate(180deg);
+}
+.checkbox-list {
+  list-style: none;
+  display: none;
+}
+.preview-text-field__item_checkbox-list-open .checkbox-list {
+  display: block;
+}
+.checkbox-list input {
+  display: none;
+}
+.checkbox-list label {
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark50;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkbox-list span {
+  width: 20px;
+  height: 20px;
+  @include button-border;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.checkbox-list input:checked + span {
+  border-color: $purple;
+  background-image: url("vector.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 4px;
 }

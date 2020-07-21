@@ -1,0 +1,13 @@
+mixin icon-text-list(header, content, label1)
+  li(class!=attributes.class)
+    ul(class='icon-text-list')
+      li
+        i(class='material-icons') mood
+        section
+          h2=header
+          p=content
+      li
+        img(src="location_city.svg")
+        section
+          h2=header
+          p=content

@@ -20,4 +20,5 @@ $(document).ready(function() {
   });
 
   $('.preview-text-field__item_open .preview-text-field__item-input').select2('open');
+  $('.preview-text-field__item_checkbox-list-open .preview-text-field__item-input').select2('open');
 });
