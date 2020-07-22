@@ -1,0 +1,22 @@
+mixin checkbox-buttons(name, style, label, label1, value1, label2, value2, label3, value3, label4, label5)
+  li(class!=attributes.class)
+    i(class='material-icons') expand_more
+    .preview-text-field__wrap 
+      b.preview-text-field__item-name= name
+      span.preview-text-field__item-style= style
+    ul(class='checkbox-list')
+      li
+        label
+          input(type="checkbox")
+          span
+          =label
+      li
+        label
+          input(type="checkbox" checked)
+          span
+          =label1
+      li
+        label
+          input(type="checkbox" checked)
+          span
+          =label2

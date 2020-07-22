@@ -1,4 +1,4 @@
-mixin icon-text-list(header, content, label1)
+mixin icon-text-list(header, content, header1, content1)
   li(class!=attributes.class)
     ul(class='icon-text-list')
       li
@@ -7,7 +7,8 @@ mixin icon-text-list(header, content, label1)
           h2=header
           p=content
       li
-        img(src="location_city.svg")
+        i(class='material-icons')
+          img(src=require(`blocks/icon-text-list/location_city.svg`).default)
         section
-          h2=header
-          p=content
+          h2=header1
+          p=content1

@@ -1,9 +1,27 @@
+@import '~scss/variables.scss';
 .icon-text-list {
   list-style: none;
+  width: 280px;
 }
 .icon-text-list li {
   display: flex;
+  border-bottom: solid 1px rgba(31, 32, 65, 0.1);
+  padding-bottom: 17px;
+  margin-bottom: 20px;
 }
 .icon-text-list .material-icons {
   position: static;
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  line-height: 41px;
+  color: $purple;
+}
+.icon-text-list h2, .icon-text-list p {
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark75;
+}
+.icon-text-list section {
+  margin-left: 10px;
 }

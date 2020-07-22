@@ -13,12 +13,11 @@ $(document).ready(function() {
     );
     return $state;
   };
-  
-  $(".preview-text-field__item_open .preview-text-field__item-input").select2({
+  var dropdown = $(".preview-text-field__item_open .preview-text-field__item-input");
+  dropdown.select2({
     placeholder: "2 спальни, 2 кровати...",
     templateResult: formatState
   });
 
-  $('.preview-text-field__item_open .preview-text-field__item-input').select2('open');
-  $('.preview-text-field__item_checkbox-list-open .preview-text-field__item-input').select2('open');
+  dropdown.select2('open');
 });

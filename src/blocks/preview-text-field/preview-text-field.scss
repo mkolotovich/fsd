@@ -2,15 +2,17 @@
 @import '~scss/mixins.scss';
 .preview-text-field {
   list-style: none;
-  margin-top: 65px;
 }
 .preview-text-field__item {
-  max-width: 320px;
+  min-width: 320px;
   margin-bottom: 20px;
   position: relative;
 }
 .preview-text-field__item_half-width {
   min-width: 150px;
+}
+.preview-text-field__item_half-width .select2 {
+  max-width: 150px;
 }
 .preview-text-field__item:nth-child(n+4) {
   margin-bottom: 40px;
@@ -78,4 +80,7 @@
 }
 .preview-text-field__item:nth-child(9) {
   margin-bottom: 172px;
+}
+.preview-text-field__item:nth-child(11) {
+  margin-bottom: 102px;
 }

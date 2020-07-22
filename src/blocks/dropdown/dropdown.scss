@@ -44,6 +44,9 @@
 .preview-text-field__item_open .select2-container--default .select2-selection--single {
   border-color: $dark50;
 }
+.preview-text-field__item_open {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
 .select2-results__option {
   font-weight: bold;
   font-size: 12px;
