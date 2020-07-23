@@ -1,4 +1,43 @@
+@import '~scss/variables.scss';
 .form-elements-center-column {
   list-style:none;
   flex-grow: 1;
+}
+.form-elements-center-column__item {
+  max-width: 222px;
+  margin-bottom: 40px;
+}
+.form-elements-center-column__item:nth-child(2) {
+  margin-bottom: 36px;
+}
+.form-elements-center-column__item_two-third-width {
+  max-width: 260px;
+}
+.form-elements-center-column__item_two-third-width span {
+  width: 40px;
+  border-radius: 10px;
+}
+.form-elements-center-column__item_two-third-width input + span {
+  position: relative;
+}
+.form-elements-center-column__item_two-third-width input:checked + span {
+  background: none;
+}
+.form-elements-center-column__item_two-third-width input + span::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: $dark25;
+  position: absolute;
+  border-radius: 10px;
+  top: 3px;
+  left: 3px;
+}
+.form-elements-center-column__item_two-third-width input:checked + span::after {
+  left: 23px;
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+}
+.form-elements-center-column__item_two-third-width label {
+  line-height: 24px;
+  color: $dark75;
 }

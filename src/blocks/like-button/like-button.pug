@@ -1,0 +1,12 @@
+mixin like-button(name, value, value1)
+  li(class!=attributes.class)
+    b.form-elements-center-column__item-name= name
+    ul(class='like-button')
+      li
+        button
+          i(class='material-icons') favorite_border
+          =value
+      li
+        button
+          i(class='material-icons') favorite
+          =value1

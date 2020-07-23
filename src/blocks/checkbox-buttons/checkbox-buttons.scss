@@ -1,0 +1,14 @@
+@import '~scss/variables.scss';
+.form-elements-center-column__item-name {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark;
+}
+.form-elements-center-column__item_checkbox-list-open .checkbox-list {
+  display: block;
+  margin-top: 16px;
+}
+.form-elements-center-column__item_checkbox-list-open span{
+  flex-shrink: 0;
+}

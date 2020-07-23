@@ -1,0 +1,43 @@
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
+.radio-buttons {
+  list-style: none;
+  @include flex-between;
+  margin-top: 16px;
+}
+.radio-buttons li {
+  display: flex;
+  align-items: center;
+}
+.radio-buttons input {
+  display: none;
+}
+.radio-buttons label {
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark50;
+}
+.radio-buttons input:checked ~ label {
+  color: $dark75;
+}
+.radio-buttons input + span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark25;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 10px;
+}
+.radio-buttons input:checked + span {
+  border-color: $purple;
+}
+.radio-buttons input:checked + span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+  top: 3px;
+  left: 3px;
+}

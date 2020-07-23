@@ -1,0 +1,10 @@
+@import '~scss/mixins.scss';
+.like-button {
+  list-style: none;
+  @include flex-between;
+  margin-top: 16px;
+}
+.like-button button {
+  width: 40px;
+  height: 20px;
+}

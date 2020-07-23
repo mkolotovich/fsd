@@ -1,19 +1,14 @@
-mixin checkbox-buttons(name, label, label1, label2)
+mixin toggle(name, label, label1, label2)
   li(class!=attributes.class)
     b.form-elements-center-column__item-name= name
     ul(class='checkbox-list')
       li
         label
-          input(type="checkbox")
+          input(type="checkbox" checked)
           span
           =label
       li
         label
-          input(type="checkbox" checked)
+          input(type="checkbox")
           span
           =label1
-      li
-        label
-          input(type="checkbox" checked)
-          span
-          =label2

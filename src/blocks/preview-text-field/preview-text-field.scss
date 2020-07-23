@@ -2,9 +2,10 @@
 @import '~scss/mixins.scss';
 .preview-text-field {
   list-style: none;
+  min-width: 320px;
+  margin-right: 126px;
 }
 .preview-text-field__item {
-  min-width: 320px;
   margin-bottom: 20px;
   position: relative;
 }
