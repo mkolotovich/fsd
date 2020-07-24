@@ -18,6 +18,9 @@ $(document).ready(function() {
     placeholder: "2 спальни, 2 кровати...",
     templateResult: formatState
   });
-
   dropdown.select2('open');
+
+  $(".preview-text-field__item_full-width").select2({
+    placeholder: "Сколько гостей"
+  });
 });

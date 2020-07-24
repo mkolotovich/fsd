@@ -7,4 +7,30 @@
 .like-button button {
   width: 40px;
   height: 20px;
+  @include button-border;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-size: 10px;
+  line-height: 12px;
+  color: $dark25;
+  display: flex;
+  align-items: center;
+}
+.like-button .material-icons {
+  font-size: 10px;
+  line-height: 9px;
+  color: $dark25;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+}
+.like-button__item button, .like-button__item .material-icons {
+  color: $purple;
+}
+.like-button__item button {
+  border-color: $purple;
 }

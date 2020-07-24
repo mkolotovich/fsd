@@ -8,8 +8,7 @@ mixin dropdown(name, style, label, label1, value1, label2, value2, label3, value
       if lessThanOne
         option(label=label value=label)=label
       else
-        option(label=label1 value=label)=label
+        option(label=label)
         option(label=label1 value=value1)=label1
         option(label=label2 value=value2)=label2
         option(label=label3 value=value3)=label3
-+dropdown('Dropdown', 'Default', 'Сколько гостей')(class="preview-text-field__item")

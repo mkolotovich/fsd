@@ -2,8 +2,12 @@ include ../checkbox-buttons/checkbox-buttons.pug
 include ../radio-buttons/radio-buttons.pug
 include ../toggle/toggle.pug
 include ../like-button/like-button.pug
+include ../rate-button/rate-button.pug
+include ../dropdown/dropdown.pug
 ul.form-elements-center-column
   +checkbox-buttons('Checkbox Buttons','Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')(class="form-elements-center-column__item form-elements-center-column__item_checkbox-list-open")
   +radio-buttons('Radio Buttons','Мужчина', 'Женщина', 'male', 'female')(class="form-elements-center-column__item")
   +toggle('Toggle','Получать спецпредложения', 'Получать спецпредложения')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width form-elements-center-column__item_checkbox-list-open")
-  +like-button('like button','2', '12')(class="form-elements-center-column__item")
+  +like-button('like button','2', '12')(class="form-elements-center-column__item form-elements-center-column__item_one-third-width")
+  +rate-button('rate button','2', '12')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width")
+  +dropdown('dropdown', '', 'Сколько гостей','взрослые','0', 'дети','0', 'младенцы','0')(class="preview-text-field__item preview-text-field__item_full-width preview-text-field__item_opacity75 preview-text-field__item_open")
