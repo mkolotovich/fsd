@@ -1,0 +1,15 @@
+mixin comment(name, value, value1)
+  li(class!=attributes.class)
+    div
+      img(src = '87cd4672e40ea433ba05b7215941c678.png')
+      b.form-elements-center-column__item-name= name
+      p=value 
+    ul(class='like-button')
+      li
+        button
+          i(class='material-icons') favorite_border
+          =value
+      li(class='like-button__item')
+        button
+          i(class='material-icons') favorite
+          =value1

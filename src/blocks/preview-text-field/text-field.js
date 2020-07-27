@@ -18,9 +18,23 @@ $(document).ready(function() {
     placeholder: "2 спальни, 2 кровати...",
     templateResult: formatState
   });
-  dropdown.select2('open');
+  
+  var dropdownApply = $(".form-elements-center-column .preview-text-field__item-input");
 
-  $(".preview-text-field__item_full-width").select2({
-    placeholder: "Сколько гостей"
+  function formatState (state) {
+    if (!state.id) {
+      return state.text;
+    }
+    var $state = $(
+      '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
+    );
+    return $state;
+  };
+  
+  dropdownApply.select2({
+    placeholder: "Сколько гостей",
+    templateResult: formatState
   });
+
+  dropdown.select2('open');
 });

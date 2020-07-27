@@ -1,0 +1,18 @@
+mixin rich-checkbox-buttons(name, header, label, header1, label1)
+  li(class!=attributes.class)
+    b.form-elements-center-column__item-name= name
+    ul(class='checkbox-list')
+      li
+        label
+          input(type="checkbox")
+          span
+          div
+            b=header
+            span=label
+      li
+        label
+          input(type="checkbox")
+          span
+          div
+            b=header1
+            span=label1

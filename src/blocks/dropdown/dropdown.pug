@@ -1,4 +1,4 @@
-mixin dropdown(name, style, label, label1, value1, label2, value2, label3, value3)
+mixin dropdown(name, style, label, label1, value1, label2, value2, label3, value3, label4)
   li(class!=attributes.class)
     i(class='material-icons') expand_more
     .preview-text-field__wrap 
@@ -12,3 +12,4 @@ mixin dropdown(name, style, label, label1, value1, label2, value2, label3, value
         option(label=label1 value=value1)=label1
         option(label=label2 value=value2)=label2
         option(label=label3 value=value3)=label3
+        option(label=label4)=label4

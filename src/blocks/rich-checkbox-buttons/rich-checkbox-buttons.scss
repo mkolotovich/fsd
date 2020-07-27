@@ -1,0 +1,19 @@
+@import '~scss/variables.scss';
+.checkbox-list div {
+  display: flex;
+  flex-direction: column;
+}
+.form-elements-center-column__item_checkbox-list-rich {
+  max-width: 266px;
+}
+.form-elements-center-column__item_checkbox-list-rich .checkbox-list label {
+  align-items:normal;
+}
+.form-elements-center-column__item_checkbox-list-rich b {
+  color: $dark75;
+  margin-bottom: 5px;
+}
+.form-elements-center-column__item_checkbox-list-rich span {
+  font-size: 12px;
+  line-height: 14px;
+}
