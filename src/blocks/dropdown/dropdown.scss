@@ -67,13 +67,10 @@
 .select2-results__option:last-child .dropdown__button:first-child{
   opacity: 0.38;
 }
-body > span:nth-child(5) .select2-results__option:last-child .dropdown {
-  display: none;
-}
-body > span:nth-child(5) .select2-results__option:last-child {
+.dropdown__apply {
   color: $purple;
   padding-top: 13px;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
 }
 .select2-results__option:first-child {
   padding-top: 6px;

@@ -25,9 +25,16 @@ $(document).ready(function() {
     if (!state.id) {
       return state.text;
     }
-    var $state = $(
-      '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
-    );
+    var $state;
+    if (state.id === 'применить') {
+      $state = $(
+        '<span class="dropdown__apply">' + state.text + '</span>'
+      );  
+    } else { 
+      $state = $(
+        '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
+      );
+    }
     return $state;
   };
   

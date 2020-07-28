@@ -4,7 +4,7 @@
   @include flex-between;
   margin-top: 16px;
 }
-.like-button button {
+.like-button__button {
   width: 40px;
   height: 20px;
   @include button-border;
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
 }
-.like-button .material-icons {
+.like-button__button .material-icons {
   font-size: 10px;
   line-height: 9px;
   color: $dark25;
@@ -28,9 +28,13 @@
   justify-content: center;
   margin-right: 2px;
 }
-.like-button__item button, .like-button__item .material-icons {
+.like-button__button_pressed, .like-button__button_pressed .material-icons {
   color: $purple;
 }
-.like-button__item button {
+.like-button__button_pressed {
   border-color: $purple;
+}
+.like-button.comment-block {
+  margin-left: 4px;
+  margin-top: 9px;
 }

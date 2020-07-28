@@ -1,0 +1,32 @@
+@import '~scss/variables.scss';
+.comment-image-block img {
+  border: 2px solid $white;
+  border-radius: 32px;
+  filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+  margin-right: 10px;
+}
+.comment-image-block .form-elements-center-column__item-name {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: none;
+  color: $dark75;
+}
+.comment-image-block p {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark75;
+}
+.comment-image-block div {
+  margin-top: 3px;
+}
+.comment-block .like-button__button {
+  margin-right: 14px;
+}
+.comment-block p {
+  margin-top: 1px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark75;
+  max-width: 653px;
+}

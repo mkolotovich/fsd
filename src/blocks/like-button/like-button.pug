@@ -3,10 +3,10 @@ mixin like-button(name, value, value1)
     b.form-elements-center-column__item-name= name
     ul(class='like-button')
       li
-        button
+        button(class="like-button__button")
           i(class='material-icons') favorite_border
           =value
       li(class='like-button__item')
-        button
+        button(class="like-button__button like-button__button_pressed")
           i(class='material-icons') favorite
           =value1

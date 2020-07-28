@@ -1,0 +1,24 @@
+@import '~scss/variables.scss';
+.irs--big .irs-line {
+  height: 6px;
+  border-color: $dark25;
+  border-radius: 3px;
+  background: $white;
+  top: 15px;
+}
+.irs--big .irs-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  border: none;
+  top: 15px;
+}
+.irs--big .irs-handle {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  border: 2px solid $white;
+  border-radius: 10px;
+  top: 10px; 
+  box-shadow: unset;
+}

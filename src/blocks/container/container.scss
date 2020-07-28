@@ -16,7 +16,8 @@
     }
   }
   &_ui-kit {
-    display: flex;
+    display: grid;
+    grid-template-columns: 446px 392px auto;
     margin-top: 65px;
   }
 }

@@ -1,15 +1,12 @@
-mixin comment(name, value, value1)
+mixin comment(name, value, value1, content)
   li(class!=attributes.class)
-    div
-      img(src = '87cd4672e40ea433ba05b7215941c678.png')
-      b.form-elements-center-column__item-name= name
-      p=value 
-    ul(class='like-button')
-      li
-        button
-          i(class='material-icons') favorite_border
-          =value
-      li(class='like-button__item')
-        button
-          i(class='material-icons') favorite
-          =value1
+    div.comment-image-block
+      img(src=require(`blocks/comment/87cd4672e40ea433ba05b7215941c678.png`).default alt=name width="48")
+      div
+        b.form-elements-center-column__item-name= name
+        p=value 
+    div(class="like-button").comment-block
+      button(class='like-button__button like-button__button_pressed')
+        i(class='material-icons') favorite
+        =value1
+      p=content

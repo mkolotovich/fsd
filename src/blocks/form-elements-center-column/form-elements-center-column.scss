@@ -1,7 +1,8 @@
 @import '~scss/variables.scss';
-.form-elements-center-column {
+.form-elements-center-column.preview-text-field {
   list-style:none;
   flex-grow: 1;
+  margin-right: 72px;
 }
 .form-elements-center-column__item {
   max-width: 222px;
@@ -12,6 +13,9 @@
 }
 .form-elements-center-column__item:nth-child(5) {
   margin-bottom: 196px;
+}
+.form-elements-center-column__item:nth-child(7) {
+  margin-bottom: 233px;
 }
 .form-elements-center-column__item_two-third-width {
   max-width: 260px;
@@ -46,4 +50,11 @@
 }
 .form-elements-center-column__item_one-third-width {
   max-width: 90px;
+}
+.form-elements-center-column__item_two-width > div {
+  display: flex;
+}
+.form-elements-center-column__item_two-width {
+  max-width: none;
+  width: 711px;
 }
