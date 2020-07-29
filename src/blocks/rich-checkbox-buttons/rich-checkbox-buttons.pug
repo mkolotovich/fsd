@@ -6,13 +6,13 @@ mixin rich-checkbox-buttons(name, header, label, header1, label1)
         label
           input(type="checkbox")
           span(class='checkbox-list__custom-checkbox')
-          div
+          span
             b=header
-            span=label
+            span(class='checkbox-list__description')=label
       li
         label
           input(type="checkbox")
           span(class='checkbox-list__custom-checkbox')
-          div
+          span
             b=header1
-            span=label1
+            span(class='checkbox-list__description')=label1

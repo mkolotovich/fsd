@@ -1,4 +1,5 @@
 @import '~scss/variables.scss';
+@import '~scss/mixins.scss';
 $border-size: 2px;
 $padding-y: 14px;
 $padding-x: 20px;
@@ -6,7 +7,7 @@ $padding-y-small: 10px;
 $border-radius: 22px;
 $gradient: linear-gradient(
   180deg,
-  $purple,
+  $purple 0%,
   rgba(139, 164, 249, 1) 100%
 );
 $gradient-white: linear-gradient(white, white);
@@ -26,12 +27,17 @@ $gradient-50: linear-gradient(
   color: $purple;
   cursor: pointer;
   text-align: center;
-
+  font-size: 12px;
+  line-height: 15px;
   &:hover {
     color: $dark50;
   }
   &_small {
-  padding: $padding-y-small $padding-x;
+    padding: 0;
+    margin-right: 20px;
+  }
+  &_small-hover {
+    color: $dark50;
   }
   &_bordered {
     padding: $padding-y - $border-size $padding-x - $border-size;
@@ -46,16 +52,17 @@ $gradient-50: linear-gradient(
       background-image: $gradient-white, $gradient-50;
     }
   }
+  &_bordered-hover {
+    color: $purple;
+    background-image: $gradient-white, $gradient-50;
+  }
   &_small.button_bordered  {
     padding: $padding-y-small - $border-size $padding-x - $border-size;
-    
   }
   &_filled {
     color: $white;
     border-radius: $border-radius;
     background: $gradient;
-    font-size: 12px;
-    line-height: 15px;
     padding-top: $padding-y;
     padding-bottom: $padding-y + 1;
     padding-left: $padding-x - 1;
@@ -65,4 +72,20 @@ $gradient-50: linear-gradient(
       background: $gradient-50;
     }
   }
+  &_filled-hover {
+    color: $white;
+    background: $gradient-50;
+  }
+}
+.buttons {
+  list-style: none;
+  @include flex-between;
+  flex-wrap: wrap;
+}
+.buttons > li {
+  margin-bottom: 30px;
+}
+.buttons-list {
+  list-style: none;
+  display: flex;
 }

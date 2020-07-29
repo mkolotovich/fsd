@@ -1,5 +1,5 @@
 @import '~scss/variables.scss';
-.checkbox-list div {
+.checkbox-list span {
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   color: $dark75;
   margin-bottom: 5px;
 }
-.form-elements-center-column__item_checkbox-list-rich span {
+.checkbox-list__description {
   font-size: 12px;
   line-height: 14px;
 }

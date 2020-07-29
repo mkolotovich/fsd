@@ -10,8 +10,9 @@ ul.preview-text-field
   +preview-text-field('Text Field', 'Default', 'Email')(class="preview-text-field__item")
   +preview-text-field('Text Field', 'Hover / Focus', 'This is pretty awesome')(class="preview-text-field__item preview-text-field__item_hover")
   include ../dropdown/dropdown.pug
+  include ../date-picker/date-picker.pug
   +dropdown('Dropdown', 'Default', 'Сколько гостей')(class="preview-text-field__item")
-  +preview-text-field('masked text field', 'Default', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
+  +date-picker('masked text field', 'Default', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
   li.preview-text-field__item
     ul.preview-text-field__list
       +dropdown('date Dropdown', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
@@ -19,8 +20,8 @@ ul.preview-text-field
   +dropdown('filter date dropdown', '', '19 авг - 23 авг')(class="preview-text-field__item preview-text-field__item_two-third-width")
   +preview-text-field('subscription text field', '', 'Email')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_subscription")
   +dropdown('dropdown', 'Default', '2 спальни, 2 кровати...')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_opacity75")
-  - var lessThanOne = false
-  +dropdown('dropdown', 'expanded', '','спальни','2', 'кровати','2', 'ванные комнаты','0')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_opacity75 preview-text-field__item_open")
+  - var lessThanOne = 3;
+  +dropdown('dropdown', 'expanded', '2 спальни, 2 кровати...','спальни','2', 'кровати','2', 'ванные комнаты','0')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_opacity75 preview-text-field__item_open")
   include ../checkbox-list/checkbox-list.pug
   +checkbox-list('expandable checkbox list')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_checkbox-list")
   +checkbox-list('expandable checkbox list', '','Завтрак', 'Письменный стол', '','Стул для кормления', '','Кроватка', '','Телевизор', 'Шампунь')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_checkbox-list preview-text-field__item_checkbox-list-open")

@@ -1,12 +1,10 @@
-mixin button(name, style, text, classes)
+mixin button(text, classes)
   li(class!=attributes.class)
-    .preview-text-field__wrap 
-      b.preview-text-field__item-name= name
-      span.preview-text-field__item-style= style
     if link
       a.button(href=link, class=classes && classes)= text
     else
-      if state === 'disabled'
-        button.button(class=classes, disabled)= text
+      if withIcon === true
+        i(class='material-icons') arrow_forward
+        button.button(class=classes)= text
       else
-        button.button(class=classes, disabled)= text
+        button.button(class=classes)= text

@@ -24,6 +24,7 @@ module.exports = (env, options) => {
         path.resolve(__dirname, 'node_modules'),
       ],
     },
+    devtool: 'source-map', // any "source-map"-like devtool is possible
     entry: {
       index: './src/index.js',
     },
