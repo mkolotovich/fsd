@@ -1,8 +1,8 @@
-mixin pagination(name, page, page1, page2, page3, page4,)
+mixin pagination(name, page, page1, page2, page3, page4, content)
   li(class!=attributes.class)
     .preview-text-field__wrap 
       b.preview-text-field__item-name= name
-    ul
+    ul.pagination
       li
         a(href)=page
       li
@@ -13,3 +13,7 @@ mixin pagination(name, page, page1, page2, page3, page4,)
         a(href)=page3
       li
         a(href)=page4
+      li
+        a(href)
+          i(class='material-icons') arrow_forward
+    p=content
