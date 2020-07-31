@@ -1,8 +1,9 @@
 include ../range-slider/range-slider.pug
 include ../button/button.pug
 include ../pagination/pagination.pug
+include ../bullet-list/bullet-list.pug
 - var withIcon = false;
-ul(class="preview-text-field").form-elements-right-column 
+ul(class="preview-text-field form-elements-center-column").form-elements-right-column 
   +range-slider('Range Slider','5 000₽ - 10 000₽')(class="form-elements-right-column__item form-elements-right-column__item__item_two-third-width")
   li(class="form-elements-right-column__item form-elements-right-column__item_buttons")
     .preview-text-field__wrap 
@@ -19,3 +20,5 @@ ul(class="preview-text-field").form-elements-right-column
   - var withIcon = true;
   +button('перейти к оплате', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")
   +pagination('pagination','1','2','3','...','15','1 – 12 из 100+ вариантов аренды')(class="form-elements-right-column__item form-elements-right-column__item_pagination")
+  +dropdown('dropdown', '', 'Сколько гостей','взрослые','2', 'дети','1', 'младенцы','0', 'применить', 'очистить')(class="preview-text-field__item preview-text-field__item_opacity75 preview-text-field__item_open")
+  +bullet-list('bullet list','Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')(class="form-elements-right-column__item form-elements-right-column__item_bullet-list form-elements-center-column__item_checkbox-list-open")

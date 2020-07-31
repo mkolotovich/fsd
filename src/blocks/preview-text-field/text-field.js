@@ -8,9 +8,24 @@ $(document).ready(function() {
     if (!state.id) {
       return state.text;
     }
-    var $state = $(
-      '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
-    );
+    var $state;
+    if (state.id === 'применить') {
+      console.log(state.id);
+      $state = $(
+        '<button class="dropdown__apply">' + state.text + '</button>'
+      );  
+    } else if(state.id === 'очистить') {
+      console.log(state.id);
+      $state = $(
+        '<button class="dropdown__apply">' + state.text + '</button><button class="dropdown__apply dropdown__apply_cancel">' + state.id + '</button>'
+      ); 
+    }
+    else { 
+      console.log(state.id);
+      $state = $(
+        '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
+      );
+    }
     return $state;
   };
   var dropdown = $(".preview-text-field__item_open .preview-text-field__item-input");
@@ -20,26 +35,14 @@ $(document).ready(function() {
   });
   
   var dropdownApply = $(".form-elements-center-column .preview-text-field__item-input");
-
-  function formatState (state) {
-    if (!state.id) {
-      return state.text;
-    }
-    var $state;
-    if (state.id === 'применить') {
-      $state = $(
-        '<span class="dropdown__apply">' + state.text + '</span>'
-      );  
-    } else { 
-      $state = $(
-        '<div class="dropdown"><button class="dropdown__button" />-</button><span>' + state.id + '</span><button class="dropdown__button" />+</button></div>' + state.text + '</li>'
-      );
-    }
-    return $state;
-  };
+  var dropdownClear = $(".form-elements-right-column .preview-text-field__item-input");
   
   dropdownApply.select2({
     placeholder: "Сколько гостей",
+    templateResult: formatState
+  });
+  dropdownClear.select2({
+    placeholder: "3 гостя",
     templateResult: formatState
   });
 

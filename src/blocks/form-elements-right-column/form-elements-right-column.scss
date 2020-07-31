@@ -31,6 +31,9 @@
 .form-elements-right-column__item:nth-child(3) {
   margin-bottom: 40px;
 }
+.form-elements-right-column__item:nth-child(4) {
+  margin-bottom: 230px;
+}
 .form-elements-right-column__item_pagination {
   max-width: 241px;
 }
@@ -38,4 +41,17 @@
   font-size: 14px;
   line-height: 24px;
   color: $dark75;
+}
+.form-elements-right-column .preview-text-field__item:nth-child(5) {
+  margin-bottom: 256px;
+}
+.form-elements-right-column label {
+  line-height: 24px;
+  color: $dark75;
+}
+.form-elements-right-column__item_bullet-list {
+  max-width: 263px;
+}
+.form-elements-right-column .checkbox-list__item label {
+  align-items: baseline;
 }

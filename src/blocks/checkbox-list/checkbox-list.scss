@@ -40,3 +40,16 @@
   background-position-x: center;
   background-position-y: 4px;
 }
+.checkbox-list .checkbox-list__custom-checkbox_radio {
+  width: 10px;
+  height: 10px;
+  background-color: $dark25;
+  border: none;
+}
+.checkbox-list input[type="radio"]:checked + span {
+  background-color: $purple;
+  background-image: none;
+}
+.checkbox-list__item label {
+  align-items: normal;
+}

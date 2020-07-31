@@ -1,0 +1,19 @@
+mixin bullet-list(name, label, label1, label2)
+  li(class!=attributes.class)
+    b.form-elements-center-column__item-name= name
+    ul(class='checkbox-list')
+      li
+        label
+          input(type="radio" name=name)
+          span(class="checkbox-list__custom-checkbox checkbox-list__custom-checkbox_radio")
+          =label
+      li
+        label
+          input(type="radio" name=name)
+          span(class="checkbox-list__custom-checkbox checkbox-list__custom-checkbox_radio")
+          =label1
+      li.checkbox-list__item
+        label
+          input(type="radio" name=name)
+          span(class="checkbox-list__custom-checkbox checkbox-list__custom-checkbox_radio")
+          =label2
