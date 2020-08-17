@@ -6,8 +6,11 @@
 .icon-text-list li {
   display: flex;
   border-bottom: solid 1px rgba(31, 32, 65, 0.1);
-  padding-bottom: 17px;
+  padding-bottom: 19px;
   margin-bottom: 20px;
+}
+.icon-text-list li:last-child {
+  padding-bottom: 20px;
 }
 .icon-text-list .material-icons {
   position: static;

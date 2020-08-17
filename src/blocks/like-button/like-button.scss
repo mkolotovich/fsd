@@ -28,6 +28,9 @@
   justify-content: center;
   margin-right: 2px;
 }
+.like-button__item:last-child .material-icons {
+  margin-right: 0;
+}
 .like-button__button_pressed, .like-button__button_pressed .material-icons {
   color: $purple;
 }

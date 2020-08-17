@@ -15,6 +15,9 @@
       padding: 0 $padding;
     }
   }
+  &_form .logo_ui-kit{
+    padding-left: 10px;
+  }
   &_ui-kit {
     display: grid;
     grid-template-columns: 446px 392px auto;

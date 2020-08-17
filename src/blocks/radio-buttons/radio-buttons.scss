@@ -3,7 +3,7 @@
 .radio-buttons {
   list-style: none;
   @include flex-between;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .radio-buttons li {
   display: flex;

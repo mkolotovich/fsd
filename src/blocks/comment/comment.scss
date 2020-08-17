@@ -4,6 +4,7 @@
   border-radius: 32px;
   filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
   margin-right: 10px;
+  margin-top: 3px;
 }
 .comment-image-block .form-elements-center-column__item-name {
   font-size: 14px;
@@ -22,6 +23,7 @@
 }
 .comment-block .like-button__button {
   margin-right: 14px;
+  margin-top: 3px;
 }
 .comment-block p {
   margin-top: 1px;
@@ -29,4 +31,7 @@
   line-height: 24px;
   color: $dark75;
   max-width: 653px;
+}
+.comment-block .like-button__button .material-icons {
+  margin-right: 0;
 }

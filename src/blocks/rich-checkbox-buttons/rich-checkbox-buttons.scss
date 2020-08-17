@@ -3,6 +3,12 @@
   display: flex;
   flex-direction: column;
 }
+.checkbox-list li:first-child span {
+  max-width: 206px;
+}
+.checkbox-list li:last-child span {
+  max-width: 234px;
+}
 .form-elements-center-column__item_checkbox-list-rich {
   max-width: 266px;
 }
@@ -16,4 +22,7 @@
 .checkbox-list__description {
   font-size: 12px;
   line-height: 14px;
+}
+.form-elements-center-column__item_checkbox-list-rich .checkbox-list label {
+  margin-bottom: 11px;
 }
