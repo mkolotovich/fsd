@@ -35,6 +35,7 @@ $gradient-50: linear-gradient(
   &_small {
     padding: 0;
     margin-right: 20px;
+    margin-left: 1px;
   }
   &_small-hover {
     color: $dark50;
@@ -83,7 +84,7 @@ $gradient-50: linear-gradient(
   flex-wrap: wrap;
 }
 .buttons > li {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 .buttons-list {
   list-style: none;

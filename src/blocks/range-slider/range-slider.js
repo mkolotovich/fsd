@@ -5,8 +5,8 @@ $(".js-range-slider").ionRangeSlider({
   type: "double",
   min: 5000,
   max: 10000,
-  from: 6600,
-  to: 8400,
+  from: 6500,
+  to: 8200,
   grid: false,
   force_edges: false,     // force UI in the box
   hide_min_max: true,    // show/hide MIN and MAX labels

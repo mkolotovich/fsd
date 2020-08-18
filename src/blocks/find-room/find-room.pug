@@ -1,0 +1,13 @@
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+- var withIcon = true;
+mixin find-room(name, label, label1, label2)
+  li(class!=attributes.class)
+    ul.find-room
+      li
+        h2= name
+        ul.preview-text-field__list
+          +dropdown('прибытие', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
+          +dropdown('выезд', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
+        +dropdown('гости', '', 'Сколько гостей')(class="preview-text-field__item")
+        +button('подобрать номер', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")
