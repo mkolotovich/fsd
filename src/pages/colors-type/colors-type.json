@@ -35,27 +35,5 @@
       "code": "#6FCF97",
       "mod": "green"
     }
-  ],
-  "fonts": [
-    {
-      "name": "H1",
-      "text": "This one is the sub-section or <br> widget title",
-      "mod": "h1"
-    },
-    {
-      "name": "H2",
-      "text": "Next one is the item title inside <br> widgets",
-      "mod": "h2"
-    },
-    {
-      "name": "H3",
-      "text": "This is a label or CTA text",
-      "mod": "h3"
-    },
-    {
-      "name": "Body",
-      "text": "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.",
-      "mod": "body"
-    }
   ]
 }

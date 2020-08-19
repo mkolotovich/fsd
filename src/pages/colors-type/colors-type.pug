@@ -13,4 +13,8 @@ block content
     .colors-type__colors
       +preview-colors(colors)
     .colors-type__fonts
-      +preview-fonts(fonts)
+      ul.preview-fonts
+        +preview-fonts("H1", "This one is the sub-section or <br> widget title")(class="preview-fonts__item preview-fonts__item_h1")
+        +preview-fonts("H2", "Next one is the item title inside <br> widgets")(class="preview-fonts__item preview-fonts__item_h2")
+        +preview-fonts("H3", "This is a label or CTA text")(class="preview-fonts__item preview-fonts__item_h3")
+        +preview-fonts("Body", "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.")(class="preview-fonts__item preview-fonts__item_body")

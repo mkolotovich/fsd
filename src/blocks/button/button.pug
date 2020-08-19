@@ -1,10 +1,7 @@
 mixin button(text, classes)
   li(class!=attributes.class)
-    if link
-      a.button(href=link, class=classes && classes)= text
-    else
-      if withIcon === true
-        i(class='material-icons') arrow_forward
-        button.button(class=classes)= text
-      else
-        button.button(class=classes)= text
+    if withIcon == true
+      i(class='material-icons') arrow_forward
+      button.button(class=classes)= text
+    if withIcon == false
+      button.button(class=classes)= text

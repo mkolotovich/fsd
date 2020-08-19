@@ -1,0 +1,32 @@
+.registration {
+  list-style: none;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.registration .checkbox-list li:first-child {
+  display: none;
+}
+.registration .preview-fonts__item_h1 .preview-fonts__text {
+  font-family: 'OpenSans';
+}
+.registration .preview-fonts__name {
+  display: none;
+}
+.registration__list {
+  list-style: none;
+  display: flex;
+}
+.registration__list .form-elements-right-column__item_full-width .material-icons {
+  display: none;
+}
+.registration .preview-text-field__item:nth-child(2) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(3) .preview-text-field__wrap {
+  margin-bottom: 0;
+}
+.registration .preview-text-field__item {
+  margin-bottom: 10px;
+}
+.registration .form-elements-center-column__item:nth-child(4) {
+  margin-bottom: 20px;
+}

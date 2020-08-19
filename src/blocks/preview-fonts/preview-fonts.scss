@@ -4,30 +4,35 @@ $fonts: (
     font: 'Quicksand',
     fsz: $font-lg,
     weight: bold,
+    lh: 30px,
+    color: $dark
   ),
   h2: (
     font: 'Quicksand',
     fsz: $font-md,
     weight: bold,
+    color: $dark
   ),
   h3: (
     font: 'Montserrat',
     fsz: $font-sm,
     weight: bold,
     transform: uppercase,
+    color: $dark
   ),
   body: (
     font: 'Montserrat',
     fsz: $font,
     lh: rem(24),
     mt: -3px,
+    color: $dark75
   ),
 );
 
 .preview-fonts {
   display: flex;
   flex-direction: column;
-
+  list-style: none;
   &__item {
     margin-bottom: 50px;
     display: flex;
@@ -52,6 +57,9 @@ $fonts: (
           }
           @if map-has-key($values, 'mt') {
             margin-top: map-get($values, 'mt');
+          }
+          @if map-has-key($values, 'color') {
+            color: map-get($values, 'color');
           }
         }
       }

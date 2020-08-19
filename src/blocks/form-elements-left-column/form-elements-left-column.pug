@@ -1,0 +1,23 @@
+include ../preview-text-field/preview-text-field.pug
+include ../dropdown/dropdown.pug
+include ../date-picker/date-picker.pug
+include ../checkbox-list/checkbox-list.pug
+include ../icon-text-list/icon-text-list.pug
+- var lessThanOne = true
+ul.preview-text-field
+  +preview-text-field('Text Field', 'Default', 'Email')(class="preview-text-field__item")
+  +preview-text-field('Text Field', 'Hover / Focus', 'This is pretty awesome')(class="preview-text-field__item preview-text-field__item_hover")
+  +dropdown('Dropdown', 'Default', 'Сколько гостей')(class="preview-text-field__item")
+  +date-picker('masked text field', 'Default', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
+  li.preview-text-field__item
+    ul.preview-text-field__list
+      +dropdown('date Dropdown', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
+      +dropdown('date Dropdown', '', '19.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
+  +dropdown('filter date dropdown', '', '19 авг - 23 авг')(class="preview-text-field__item preview-text-field__item_two-third-width")
+  +preview-text-field('subscription text field', '', 'Email')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_subscription")
+  +dropdown('dropdown', 'Default', '2 спальни, 2 кровати...')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_opacity75")
+  - var lessThanOne = 3;
+  +dropdown('dropdown', 'expanded', '2 спальни, 2 кровати...','спальни','2', 'кровати','2', 'ванные комнаты','0')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_opacity75 preview-text-field__item_open")
+  +checkbox-list('expandable checkbox list')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_checkbox-list")
+  +checkbox-list('expandable checkbox list', '','Завтрак', 'Письменный стол', '','Стул для кормления', '','Кроватка', '','Телевизор', 'Шампунь')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_checkbox-list preview-text-field__item_checkbox-list-open")
+  +icon-text-list('Комфорт', 'Шумопоглощающие стены', 'Удобство', 'Окно в каждой из спален')(class="preview-text-field__item preview-text-field__item_half-width")

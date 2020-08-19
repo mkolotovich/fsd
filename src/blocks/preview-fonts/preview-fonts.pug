@@ -1,7 +1,4 @@
-mixin preview-fonts(fonts)
-  .preview-fonts
-    each item in fonts
-      - const { name, text, mod } = item;
-      .preview-fonts__item(class= mod&&`preview-fonts__item_${mod}`)
-        .preview-fonts__name= name
-        .preview-fonts__text!= text
+mixin preview-fonts(name, text)
+  li(class!=attributes.class)
+    .preview-fonts__name= name
+    .preview-fonts__text!= text

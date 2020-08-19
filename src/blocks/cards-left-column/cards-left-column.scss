@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+.cards-left-column.preview-text-field {
+  max-width: 380px;
+  margin-top: 72px;
+}
+.cards-left-column .form-elements-right-column__item:nth-child(4) {
+ margin-bottom: 0;
+}
+.cards-left-column .preview-fonts__item {
+  margin-bottom: 20px;
+}
+.cards-left-column__item {
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-bottom: 40px;
+}

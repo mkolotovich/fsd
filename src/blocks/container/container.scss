@@ -21,6 +21,9 @@
   &_card {
     background-color: #F4F4F6;
   }
+  &_cards {
+    display: flex;
+  }
   &_ui-kit {
     display: grid;
     grid-template-columns: 446px 392px auto;
