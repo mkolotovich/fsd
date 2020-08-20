@@ -1,3 +1,4 @@
+@import '~scss/mixins.scss';
 .registration {
   list-style: none;
   padding-top: 40px;
@@ -16,12 +17,13 @@
 }
 .registration__list {
   list-style: none;
-  display: flex;
+  @include flex-between;
+  align-items: center;
 }
 .registration__list .form-elements-right-column__item_full-width .material-icons {
   display: none;
 }
-.registration .preview-text-field__item:nth-child(2) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(3) .preview-text-field__wrap {
+.registration .preview-text-field__item:nth-child(2) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(3) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(7) .preview-text-field__wrap {
   margin-bottom: 0;
 }
 .registration .preview-text-field__item {
@@ -29,4 +31,23 @@
 }
 .registration .form-elements-center-column__item:nth-child(4) {
   margin-bottom: 20px;
+}
+.registration .preview-text-field__item:nth-child(5) {
+  margin-bottom: 20px;
+}
+.registration .form-elements-center-column__item_checkbox-list-open .checkbox-list {
+  margin-top: 10px;
+}
+.registration .form-elements-center-column__item_checkbox-list-open {
+  margin-bottom: 20px;
+}
+.registration__item {
+  margin-top: 30px;
+}
+.registration__list li:first-child {
+  margin-bottom: 0;
+}
+.registration__list .preview-fonts__text {
+  line-height: 18px;
+  color: #000;
 }

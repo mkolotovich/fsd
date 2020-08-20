@@ -1,0 +1,54 @@
+@import '../../scss/variables.scss';
+.room {
+  list-style: none;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.room .form-elements-right-column__item:nth-child(4) {
+  margin-bottom: 0;
+}
+.room__list {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+}
+.room__list .preview-fonts__item {
+  margin-bottom: 20px;
+}
+.room .preview-text-field__item .material-icons {
+  z-index: 0;
+}
+.room > li:nth-child(5) .preview-fonts__item, .room > li:nth-child(6) .preview-fonts__item {
+  flex-direction: row-reverse;
+}
+.room__item:first-child .preview-fonts__item_h1 .preview-fonts__name {
+  font-family: "Quicksand";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+  margin-right: 0;
+  min-width: unset;
+}
+.room__item:first-child .room__list .preview-fonts__item:first-child {
+  align-items: baseline;
+  justify-content: space-between;
+  width: 64px;
+  margin-right: 5px;
+}
+.room__item:first-child .room__list .preview-fonts__item:nth-child(2) .preview-fonts__name {
+  display: none;
+}
+.room .preview-fonts__item_h3 .preview-fonts__text {
+  color: $purple;
+}
+.room__item:first-child .room__list .preview-fonts__item:last-child {
+  margin-left: auto;
+}
+.room__item:first-child .room__list .preview-fonts__item:last-child .preview-fonts__name  {
+  font-weight: bold;
+  line-height: 18px;
+  color: $dark50;
+}
