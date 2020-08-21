@@ -15,19 +15,19 @@ mixin room(number, name, name1, number2, name2)
           +dropdown('прибытие', '', '19.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
           +dropdown('выезд', '', '23.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
       +dropdown('гости', '', '3 гостя')(class="preview-text-field__item")
-      li
+      li.room__item
         ul.room__list
           +preview-fonts('', '39 960₽')(class="preview-fonts__item preview-fonts__item_body")
           +preview-fonts('', '9 990₽ х 4 суток')(class="preview-fonts__item preview-fonts__item_body")
-      li
+      li.room__item
         ul.room__list
           +preview-fonts('i', 'Сбор за услуги: скидка 2 179₽')(class="preview-fonts__item preview-fonts__item_body")
           +preview-fonts('', '0₽')(class="preview-fonts__item preview-fonts__item_body")
-      li
+      li.room__item
         ul.room__list
           +preview-fonts('i', 'Сбор за дополнительные услуги')(class="preview-fonts__item preview-fonts__item_body")
           +preview-fonts('', '300₽')(class="preview-fonts__item preview-fonts__item_body")
-      li
+      li.room__item
         ul.room__list
           +preview-fonts('', 'Итого')(class="preview-fonts__item preview-fonts__item_h2")
           li
