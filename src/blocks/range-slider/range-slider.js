@@ -1,4 +1,3 @@
-
 import 'ion-rangeslider';
 $(".js-range-slider").ionRangeSlider({
   skin: "big",

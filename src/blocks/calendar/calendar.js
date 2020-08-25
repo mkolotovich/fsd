@@ -1,39 +1,30 @@
-$('input[name="dates"]').daterangepicker({
-  "locale": {
-      "format": "MM/DD/YYYY",
-      "separator": " - ",
-      "applyLabel": "применить",
-      "cancelLabel": "очистить",
-      "fromLabel": "From",
-      "toLabel": "To",
-      "weekLabel": "W",
-      "daysOfWeek": [
-          "Вс",
-          "Пн",
-          "Вт",
-          "Ср",
-          "Чт",
-          "Пт",
-          "Сб"
-      ],
-      "monthNames": [
-          "Январь",
-          "Февраль",
-          "Март",
-          "Апрель",
-          "Mай",
-          "Июнь",
-          "Июль",
-          "Aвгуст",
-          "Сентябрь",
-          "Oктябрь",
-          "Ноябрь",
-          "Декабрь"
-      ],
-      "firstDay": 1
+import Lightpick from 'lightpick';
+var picker = new Lightpick({ 
+  field: document.getElementById('datepicker1'),
+  singleDate: false,
+  lang: 'ru',
+  footer: true,
+  inline: true,
+  locale: {
+    buttons: {
+      prev: '<i class="material-icons">arrow_backward</i>',
+      next: 'arrow_forward',
+      close: '×',
+      reset: 'очистить',
+      apply: 'применить'
+    }
   },
-  "startDate": "08/18/2019",
-  "endDate": moment(),
-}, function(start, end, label) {
-console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  startDate: '2019-08-19',
+  endDate: '2019-08-23',
 });
+var today = document.querySelector('.is-today');
+console.log(today);
+if (today === null) {
+  document.querySelector('.lightpick__day[data-time="1565211600000"]').classList.add('is-today');
+  console.log('today');
+}
+var title = document.querySelector('.lightpick__month-title');
+var toolbar = document.querySelector('.lightpick__toolbar');
+toolbar.appendChild(title);
+var next = document.querySelector('.lightpick__next-action');
+next.classList.add('material-icons');
