@@ -1,3 +1,6 @@
 mixin calendar(name, style, placeholder)
   li(class!=attributes.class)
-    input(type="text" id="datepicker1")
+    div.resetDate
+      input(type="text" placeholder="Select Date.." data-input id="flat")
+      button(class="input-button" title="clear" data-clear)|очистить
+      button(class="input-button" title="clear" data-clear)|применить
