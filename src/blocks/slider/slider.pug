@@ -1,0 +1,14 @@
+include ../../blocks/preview-fonts/preview-fonts.pug
+mixin slider(number, name, name1, number2, name2)
+  li(class!=attributes.class)
+    ul.room
+      li
+        div.your-class
+          div|your content
+          div|your content
+          div|your content
+      li.room__item
+        ul.room__list
+          +preview-fonts(number, name)(class="preview-fonts__item preview-fonts__item_h1")
+          +preview-fonts('', name1)(class="preview-fonts__item preview-fonts__item_h3")
+          +preview-fonts(number2, name2)(class="preview-fonts__item preview-fonts__item_body")

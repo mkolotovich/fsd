@@ -1,6 +1,6 @@
 mixin calendar(name, style, placeholder)
   li(class!=attributes.class)
-    div.resetDate
-      input(type="text" placeholder="Select Date.." data-input id="flat")
-      button(class="input-button" title="clear" data-clear)|очистить
-      button(class="input-button" title="clear" data-clear)|применить
+    input(type="text" placeholder="Select Date.." data-input id="flat")
+    ul.buttons-list
+      +button('очистить', 'button_small button_small-hover')
+      +button('применить', 'button_small')

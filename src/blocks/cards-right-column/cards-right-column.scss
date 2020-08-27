@@ -1,4 +1,14 @@
+@import '~scss/variables.scss';
 .cards-right-column.preview-text-field {
   margin-right: 0;
   max-width: 320px;
+}
+.cards-right-column .buttons-list{
+  justify-content: space-between;
+  background: $white;
+  padding-top: 20px;
+  line-height: 15px;
+}
+.cards-right-column .button_small {
+  margin-right: 0;
 }
