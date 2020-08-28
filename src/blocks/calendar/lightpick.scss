@@ -4,6 +4,9 @@
 }
 .flatpickr-calendar {
   width: auto;
+  box-shadow: 0px 10px 20px $dark5;
+  border: 1px solid $dark25;
+  border-radius: 4px;
 }
 .flatpickr-rContainer {
   width: 100%;

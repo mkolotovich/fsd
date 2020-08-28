@@ -19,12 +19,14 @@ let calendar = flatpickr('#flat', {
 var year = document.querySelector('.flatpickr-current-month .numInputWrapper');
 var calendarBlock = document.querySelector('.flatpickr-calendar.inline');
 var buttons = document.querySelector('.buttons-list');
-calendarBlock.append(buttons);
+if (calendarBlock !== null) {
+  calendarBlock.append(buttons);
+}
 var augustDays = document.querySelectorAll('.rangeMode .flatpickr-day:nth-child(n+36)');
 var DaysInRange = document.querySelectorAll('.flatpickr-day.inRange').length - 1;
 var lastDayInRange = document.querySelectorAll('.flatpickr-day.inRange')[DaysInRange];
 var today = document.querySelector('.today');
-if (today === null) {
+if (today === null && document.querySelector('.flatpickr-day[aria-label="Август 8, 2019"]') !== null) {
   document.querySelector('.flatpickr-day[aria-label="Август 8, 2019"]').classList.add('today');
 }
 if (calendar.currentMonth === 7 && calendar.currentYear === 2019) {
@@ -32,4 +34,6 @@ if (calendar.currentMonth === 7 && calendar.currentYear === 2019) {
     augustDays[i].style.display = 'none';
   }
 };
-lastDayInRange.style.boxShadow = '0px 0 0 #bc9cff40, 19px 0 0 #bc9cff40';
+if (calendarBlock !== null) {
+  lastDayInRange.style.boxShadow = '0px 0 0 #bc9cff40, 19px 0 0 #bc9cff40';
+}

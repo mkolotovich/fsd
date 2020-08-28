@@ -108,3 +108,12 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'slick';
+  src: url('./slick/slick.svg') format('svg'),
+    url('./slick/slick.ttf') format('truetype'),
+    url('./slick/slick.eot') format('embedded-opentype'),
+    url('./slick/slick.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
