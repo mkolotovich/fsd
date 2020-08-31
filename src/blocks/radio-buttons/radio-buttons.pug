@@ -1,12 +1,24 @@
 mixin radio-buttons(name, label, label1, id, id1)
-  li(class!=attributes.class)
-    b.form-elements-center-column__item-name= name
-    ul(class='radio-buttons')
-      li
-        input(type="radio" checked name="sex" id=id)
-        span
-        label(for=id)=label
-      li
-        input(type="radio" name="sex" id=id1)
-        span
-        label(for=id1)=label1
+  if withoutTitle == false
+    li(class!=attributes.class)
+      b.form-elements-center-column__item-name= name
+      ul(class='radio-buttons')
+        li
+          label(for=id)=label
+            input(type="radio" checked name="sex" id=id)
+            span
+        li
+          label(for=id1)=label1
+            input(type="radio" name="sex" id=id1)
+            span
+  if withoutTitle == true
+    li(class!=attributes.class)
+      ul(class='radio-buttons')
+        li
+          label(for=id)=label
+            input(type="radio" checked name="sex" id=id)
+            span
+        li
+          label(for=id1)=label1
+            input(type="radio" name="sex" id=id1)
+            span

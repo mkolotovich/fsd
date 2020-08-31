@@ -1,15 +1,22 @@
 include ../../blocks/preview-fonts/preview-fonts.pug
-mixin slider(number, name, name1, number2, name2)
+include ../rate-button/rate-button.pug
+mixin slider(number, name, name1, number2, name2, testimonials, image)
   li(class!=attributes.class)
     ul(class="room slider")
       li
-        div.your-class
-          img(src=require(`blocks/slider/images/image.png`).default alt="logo")
-          img(src=require(`blocks/slider/images/image.png`).default alt="logo")
-          img(src=require(`blocks/slider/images/image.png`).default alt="logo")
-          img(src=require(`blocks/slider/images/image.png`).default alt="logo")
+        div.slider__container
+          img(src=require(`blocks/slider/images/${image}`).default alt="pic")
+          img(src=require(`blocks/slider/images/${image}`).default alt="pic")
+          img(src=require(`blocks/slider/images/${image}`).default alt="pic")
+          img(src=require(`blocks/slider/images/${image}`).default alt="pic")
       li.room__item
         ul.room__list
           +preview-fonts(number, name)(class="preview-fonts__item preview-fonts__item_h1")
           +preview-fonts('', name1)(class="preview-fonts__item preview-fonts__item_h3")
           +preview-fonts(number2, name2)(class="preview-fonts__item preview-fonts__item_body")
+      li
+        hr
+      li.slider__item
+        ul.slider__list
+          +rate-button('','2', '12')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width")
+          +preview-fonts(testimonials, 'Отзывов')(class="preview-fonts__item preview-fonts__item_h3")

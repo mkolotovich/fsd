@@ -10,11 +10,15 @@ mixin registration(name, label, label1, label2)
       +preview-fonts("", name)(class="preview-fonts__item preview-fonts__item_h1")
       +preview-text-field('', '', 'Имя')(class="preview-text-field__item")
       +preview-text-field('', '', 'Фамилия')(class="preview-text-field__item")
-      +radio-buttons('','Мужчина', 'Женщина', 'male', 'female')(class="form-elements-center-column__item")
+      +radio-buttons('','Мужчина', 'Женщина', 'male', 'female')(class="registration__item registration__item_short")
       +date-picker('дата рождения', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
       +preview-text-field('данные для входа в сервис', '', 'Email')(class="preview-text-field__item")
       +preview-text-field('', '', 'Пароль')(class="preview-text-field__item")
-      +toggle('','', 'Получать спецпредложения')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width form-elements-center-column__item_checkbox-list-open")
+      //- +toggle('','', 'Получать спецпредложения')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width form-elements-center-column__item_checkbox-list-open")
+      li
+        ul(class='checkbox-list')
+          li
+            +toggle('Получать спецпредложения', '')
       +button('перейти к оплате', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")
       li.registration__item
         ul.registration__list

@@ -16,6 +16,9 @@
   font-size: 14px;
   line-height: 24px;
   color: $dark50;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 .radio-buttons input:checked ~ label {
   color: $dark75;

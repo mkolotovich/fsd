@@ -1,14 +1,11 @@
-mixin toggle(name, label, label1, label2)
-  li(class!=attributes.class)
-    b.form-elements-center-column__item-name= name
-    ul(class='checkbox-list')
-      li
-        label
-          input(type="checkbox" checked)
-          span(class="checkbox-list__custom-checkbox")
-          =label
-      li
-        label
-          input(type="checkbox")
-          span(class="checkbox-list__custom-checkbox")
-          =label1
+mixin toggle(label, status)
+  if status == ''
+    label.toggle
+      input(type="checkbox")
+      span(class="checkbox-list__custom-checkbox")
+      =label
+  if status !== ''
+    label.toggle
+      input(type="checkbox" checked)
+      span(class="checkbox-list__custom-checkbox")
+      =label
