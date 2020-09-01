@@ -2,10 +2,10 @@ mixin toggle(label, status)
   if status == ''
     label.toggle
       input(type="checkbox")
-      span(class="checkbox-list__custom-checkbox")
+      span(class="toggle__custom-checkbox")
       =label
   if status !== ''
     label.toggle
       input(type="checkbox" checked)
-      span(class="checkbox-list__custom-checkbox")
+      span(class="toggle__custom-checkbox")
       =label

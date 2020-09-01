@@ -1,7 +1,7 @@
 mixin button(text, classes)
   li(class!=attributes.class)
     if withIcon == true
-      i(class='material-icons') arrow_forward
       button.button(class=classes)= text
+        i(class='material-icons') arrow_forward
     if withIcon == false
       button.button(class=classes)= text

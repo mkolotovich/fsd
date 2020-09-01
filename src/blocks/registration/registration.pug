@@ -14,12 +14,9 @@ mixin registration(name, label, label1, label2)
       +date-picker('дата рождения', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
       +preview-text-field('данные для входа в сервис', '', 'Email')(class="preview-text-field__item")
       +preview-text-field('', '', 'Пароль')(class="preview-text-field__item")
-      //- +toggle('','', 'Получать спецпредложения')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width form-elements-center-column__item_checkbox-list-open")
       li
-        ul(class='checkbox-list')
-          li
-            +toggle('Получать спецпредложения', '')
-      +button('перейти к оплате', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")
+        +toggle('Получать спецпредложения', '')
+      +button('перейти к оплате', 'button_filled button_full-width')
       li.registration__item
         ul.registration__list
           +preview-fonts("Body", "Уже есть аккаунт на Toxin")(class="preview-fonts__item preview-fonts__item_body")

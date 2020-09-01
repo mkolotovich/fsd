@@ -73,6 +73,24 @@ $gradient-50: linear-gradient(
       background: $gradient-50;
     }
   }
+  &_full-width {
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 22px;
+    .material-icons {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+    }
+  }
   &_filled-hover {
     color: $white;
     background: $gradient-50;
