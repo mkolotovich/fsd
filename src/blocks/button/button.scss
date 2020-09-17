@@ -72,6 +72,9 @@ $gradient-50: linear-gradient(
       color: $white;
       background: $gradient-50;
     }
+    & .material-icons {
+      top: 0;
+    }
   }
   &_full-width {
     position: relative;

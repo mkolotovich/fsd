@@ -4,9 +4,9 @@ include ../../blocks/preview-fonts/preview-fonts.pug
 - var withIcon = true;
 mixin room(number, name, name1, number2, name2)
   li(class!=attributes.class)
-    ul.room
+    ul(class="room find-room preview-fonts")
       li.room__item
-        ul.room__list
+        ul(class="room__list")
           +preview-fonts(number, name)(class="preview-fonts__item preview-fonts__item_h1")
           +preview-fonts('', name1)(class="preview-fonts__item preview-fonts__item_h3")
           +preview-fonts(number2, name2)(class="preview-fonts__item preview-fonts__item_body")
@@ -33,4 +33,4 @@ mixin room(number, name, name1, number2, name2)
           li
             hr
           +preview-fonts('', '38 081₽')(class="preview-fonts__item preview-fonts__item_h2")
-      +button('забронировать', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")
+      +button('забронировать', 'button_filled')(class="room__item")

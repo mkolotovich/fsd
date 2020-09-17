@@ -10,5 +10,5 @@ mixin find-room(name, label, label1, label2)
         ul.preview-text-field__list
           +dropdown('прибытие', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
           +dropdown('выезд', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
-      +dropdown('гости', '', 'Сколько гостей')(class="preview-text-field__item")
+      +dropdown('гости', '', '')(class="preview-text-field__item")
       +button('подобрать номер', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")

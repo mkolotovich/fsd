@@ -6,6 +6,26 @@
   padding-right: 30px;
   padding-bottom: 30px;
 }
+.room .preview-fonts__name {
+  display: block;
+}
+.room__item .button {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+  position: relative;
+}
+.room__item .material-icons {
+  position: absolute;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
 .room .form-elements-right-column__item:nth-child(4) {
   margin-bottom: 0;
 }
@@ -13,6 +33,7 @@
   display: flex;
   align-items: baseline;
   list-style: none;
+  flex-direction: row;
 }
 .room__list .preview-fonts__item {
   margin-bottom: 20px;

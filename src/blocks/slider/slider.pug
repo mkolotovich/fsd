@@ -2,7 +2,7 @@ include ../../blocks/preview-fonts/preview-fonts.pug
 include ../rate-button/rate-button.pug
 mixin slider(number, name, name1, number2, name2, testimonials, image)
   li(class!=attributes.class)
-    ul(class="room slider")
+    ul(class="room slider preview-fonts")
       li
         div.slider__container
           img(src=require(`blocks/slider/images/${image}`).default alt="pic")
@@ -18,5 +18,5 @@ mixin slider(number, name, name1, number2, name2, testimonials, image)
         hr
       li.slider__item
         ul.slider__list
-          +rate-button('','2', '12')(class="form-elements-center-column__item form-elements-center-column__item_two-third-width")
+          +rate-button('','2', '12')
           +preview-fonts(testimonials, 'Отзывов')(class="preview-fonts__item preview-fonts__item_h3")

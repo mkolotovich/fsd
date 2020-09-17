@@ -37,14 +37,13 @@ $(document).ready(function() {
   var dropdownApply = $(".form-elements-center-column .preview-text-field__item-input");
   var dropdownClear = $(".form-elements-right-column .preview-text-field__item-input");
   
-  dropdownApply.select2({
-    placeholder: "Сколько гостей",
-    templateResult: formatState
-  });
   dropdownClear.select2({
     placeholder: "3 гостя",
     templateResult: formatState
   });
-
+  dropdownApply.select2({
+    placeholder: "Сколько гостей",
+    templateResult: formatState
+  });
   dropdown.select2('open');
 });

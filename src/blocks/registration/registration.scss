@@ -20,7 +20,7 @@
   @include flex-between;
   align-items: center;
 }
-.registration__list .form-elements-right-column__item_full-width .material-icons {
+.registration__list .material-icons {
   display: none;
 }
 .registration .preview-text-field__item:nth-child(2) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(3) .preview-text-field__wrap, .registration .preview-text-field__item:nth-child(7) .preview-text-field__wrap {
@@ -53,6 +53,7 @@
 }
 .registration .button_bordered {
   min-width: 99px;
+  padding-bottom: 13px;
 }
 .registration__item_short {
   max-width: 222px;
