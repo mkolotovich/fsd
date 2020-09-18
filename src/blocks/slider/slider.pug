@@ -17,6 +17,6 @@ mixin slider(number, name, name1, number2, name2, testimonials, image)
       li
         hr
       li.slider__item
-        ul.slider__list
+        ul(class="slider__list form-elements-center-column")
           +rate-button('','2', '12')
           +preview-fonts(testimonials, 'Отзывов')(class="preview-fonts__item preview-fonts__item_h3")
