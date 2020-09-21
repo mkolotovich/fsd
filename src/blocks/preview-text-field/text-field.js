@@ -35,6 +35,7 @@ $(document).ready(function() {
   });
   
   var dropdownApply = $(".form-elements-center-column .preview-text-field__item-input");
+  //изменить селектор
   var dropdownClear = $(".form-elements-right-column .preview-text-field__item-input");
   
   dropdownClear.select2({
