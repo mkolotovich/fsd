@@ -14,7 +14,7 @@ mixin registration(name, label, label1, label2)
       +date-picker('дата рождения', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item")
       +preview-text-field('данные для входа в сервис', '', 'Email')(class="preview-text-field__item")
       +preview-text-field('', '', 'Пароль')(class="preview-text-field__item")
-      li
+      li(class="registration__item registration__item_toggle")
         +toggle('Получать спецпредложения', '')
       +button('перейти к оплате', 'button_filled button_full-width')
       li.registration__item

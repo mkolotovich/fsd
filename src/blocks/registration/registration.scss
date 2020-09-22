@@ -1,7 +1,7 @@
 @import '~scss/mixins.scss';
 .registration {
   list-style: none;
-  padding-top: 40px;
+  padding-top: 39px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
@@ -52,10 +52,15 @@
   color: #000;
 }
 .registration .button_bordered {
-  min-width: 99px;
+  width: 99px;
   padding-bottom: 13px;
 }
 .registration__item_short {
   max-width: 222px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  margin-top: -5px;
+}
+.registration__item_toggle {
+  margin-top: -3px;
+  margin-bottom: 23px;
 }

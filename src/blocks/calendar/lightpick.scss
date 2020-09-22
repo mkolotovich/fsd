@@ -24,6 +24,8 @@
 }
 .flatpickr-calendar.inline {
   padding: 20px;
+  padding-bottom: 19px;
+  top: 0;
 }
 .flatpickr-months .flatpickr-prev-month {
   padding-top: 0px;
@@ -68,7 +70,7 @@ span.flatpickr-weekday {
 }
 .flatpickr-months {
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .flatpickr-current-month .numInputWrapper {
   width: 45px;
@@ -112,4 +114,7 @@ span.flatpickr-weekday {
 }
 .flatpickr-day.selected.startRange + .inRange {
   box-shadow: -19px 0 0 #bc9cff40, 0px 0 0 #bc9cff40;
+}
+.flatpickr-calendar .button_small {
+  margin-left: 0;
 }

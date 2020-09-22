@@ -34,9 +34,9 @@ $(document).ready(function() {
     templateResult: formatState
   });
   
-  var dropdownApply = $(".form-elements-center-column .preview-text-field__item-input");
-  //изменить селектор
-  var dropdownClear = $(".form-elements-right-column .preview-text-field__item-input");
+  var dropdownApply = $(".container_ui-kit .form-elements-center-column .preview-text-field__item-input");
+
+  var dropdownClear = $(".container_ui-kit .form-elements-right-column .preview-text-field__item-input");
   
   dropdownClear.select2({
     placeholder: "3 гостя",

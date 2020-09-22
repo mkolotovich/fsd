@@ -6,6 +6,12 @@
   padding-right: 30px;
   padding-bottom: 30px;
 }
+.room__item:nth-child(4) {
+  margin-bottom: 2px;
+}
+.room__item:nth-child(5) {
+  margin-bottom: 6px;
+}
 .room .preview-fonts__name {
   display: block;
 }
@@ -113,14 +119,21 @@
   align-items: center;
   margin-left: 5px;
 }
+.room__item:nth-child(5) .room__list li:first-child .preview-fonts__name {
+  margin-top: -2px;
+}
 .room__item:nth-child(6) .room__list li:first-child .preview-fonts__name {
   margin-right: 42px;
+  margin-top: -3px;
 }
 .room__item:nth-child(6) .room__list li:first-child .preview-fonts__text {
   line-height: 18px;
 }
 .room > li:nth-child(6) .preview-fonts__item {
   margin-bottom: 30px;
+}
+.room > li:nth-child(6) > ul > li:nth-child(2) > .preview-fonts__text {
+  margin-top: -21px;
 }
 .room__item:nth-child(7) .room__list li:first-child .preview-fonts__text {
   font-family: 'OpenSans';
