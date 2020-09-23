@@ -1,6 +1,7 @@
-mixin date-picker(name, style, placeholder)
+mixin date-picker(name, style, placeholder,id)
   li(class!=attributes.class)
+    i(class='material-icons') expand_more
     .preview-text-field__wrap 
       b.preview-text-field__item-name= name
       span.preview-text-field__item-style= style
-    input(class='preview-text-field__item-input' id='datepicker' placeholder= placeholder)
+    input(class='preview-text-field__item-input' id= id placeholder= placeholder)

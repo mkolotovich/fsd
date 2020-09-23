@@ -20,3 +20,12 @@
 .cards-right-column .preview-text-field__item:nth-child(1) {
   margin-bottom: 40px;
 }
+.cards-right-column.preview-text-field > li:nth-child(2) {
+  margin-bottom: 39px;
+}
+.cards-right-column.preview-text-field > li:nth-child(3) .slider .preview-fonts__item_h1 {
+  width: 58px;
+}
+.cards-right-column__item_without-buttons .slick-arrow {
+  display: none!important;
+}

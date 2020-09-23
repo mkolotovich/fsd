@@ -5,4 +5,5 @@ mixin logo(options)
     const mod = options && options.mod && options.mod
 
   .logo(class = mod && `logo_${mod}`)
-    img.logo__image(src=require(`blocks/logo/images/${logo}`).default alt="logo")
+    a(href="index.html")
+      img.logo__image(src=require(`blocks/logo/images/${logo}`).default alt="logo")
