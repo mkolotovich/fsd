@@ -15,7 +15,7 @@
   min-width: 280px;
   max-width: 280px;
 }
-.preview-text-field__item .flatpickr-months .material-icons {
+.preview-text-field__item .flatpickr-months .material-icons, .flatpickr-months .material-icons {
   line-height: 20px;
   color: $purple;
   justify-content: unset;
@@ -117,4 +117,20 @@ span.flatpickr-weekday {
 }
 .flatpickr-calendar .button_small {
   margin-left: 0;
+}
+.flatpickr-input[readonly] {
+  width: 100%;
+  height: 44px;
+  border: 1px solid $dark25;
+  border-radius: 4px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark75;
+  padding-left: 14px;
+}
+.flatpickr-calendar.animate.open {
+  padding: 20px;
+  padding-bottom: 19px;
+  max-width: 320px;
 }

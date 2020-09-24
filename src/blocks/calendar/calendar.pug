@@ -1,6 +1,13 @@
 mixin calendar(name, style, placeholder)
   li(class!=attributes.class)
-    input(type="text" placeholder="Select Date.." data-input id="flat")
-    ul.buttons-list
-      +button('очистить', 'button_small button_small-hover')
-      +button('применить', 'button_small')
+    if inline == true
+      input(type="text" placeholder="Select Date.." data-input id="flat")
+      ul.buttons-list
+        +button('очистить', 'button_small button_small-hover')
+        +button('применить', 'button_small')
+    if inline == false
+      i(class='material-icons') expand_more
+      .preview-text-field__wrap 
+        b.preview-text-field__item-name= name
+        span.preview-text-field__item-style= style
+      input(type="text" placeholder=placeholder data-input id="flat1")

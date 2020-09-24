@@ -25,22 +25,60 @@ $(document).ready(function() {
     }
     return $state;
   };
-  var dropdown = $(".preview-text-field__item_open .preview-text-field__item-input");
-  //
-  var dropdownIncrease = $("body > span:nth-child(5) .select2-results__options li:nth-child(1) .dropdown .dropdown__button:last-child");  
-  var parent = dropdownIncrease.parentNode;
-  //
+  var dropdown = $(".preview-text-field:first-child .preview-text-field__item_open .preview-text-field__item-input");
+  var dropdownDefault = $(".preview-text-field__item:nth-child(8) .preview-text-field__item-input");
+
   dropdown.select2({
     placeholder: "2 спальни, 2 кровати...",
     templateResult: formatState,
+    closeOnSelect: false,
   });
-  //
-  dropdownIncrease.onclick = function() {
-    var count = parent.lastElementChild.textContent;
-    console.log(count);
-    parent.lastElementChild.textContent = count + 1;
-  };
-  //
+
+  dropdown.on('select2:selecting', function (evt) {
+    evt.preventDefault();
+    var count = parent.children[1].textContent;
+    var countBeds = parentBeds.children[1].textContent;
+    if (Number(count) === 0) {
+      dropdownDecrease.style.opacity = '0.38';
+    } else if (Number(count) >= 0) {
+      dropdownDecrease.style.opacity = '1';
+    }
+    dropdownIncrease.onclick = function() {
+      parent.children[1].textContent = Number(count) + 1;
+      newPlaceholder[0] = Number(newPlaceholder[0]) + 1;
+      var newPlaceholderString = newPlaceholder.join(' ');
+      console.log(newPlaceholderString);
+      placeholder[2].placeholder = newPlaceholderString;
+    }
+    dropdownDecrease.onclick = function() {
+      if(count > 0) {
+        parent.children[1].textContent = Number(count) - 1;
+        newPlaceholder[0] = Number(newPlaceholder[0]) - 1;
+        var newPlaceholderString = newPlaceholder.join(' ');
+        console.log(newPlaceholderString);
+        placeholder[2].placeholder = newPlaceholderString;
+      }
+      dropdownBedsIncrease.onclick = function() {
+        parentBeds.children[1].textContent = Number(countBeds) + 1;
+        newPlaceholder[2] = Number(newPlaceholder[2]) + 1;
+        var newPlaceholderString = newPlaceholder.join(' ');
+        console.log(newPlaceholderString);
+        placeholder[2].placeholder = newPlaceholderString;
+      } 
+    }
+    dropdownBedsDecrease.onclick = function() {
+      parentBeds.children[1].textContent = Number(countBeds) - 1;
+      newPlaceholder[2] = Number(newPlaceholder[2]) - 1;
+      var newPlaceholderString = newPlaceholder.join(' ');
+      console.log(newPlaceholderString);
+      placeholder[2].placeholder = newPlaceholderString;
+    }
+  });
+  dropdownDefault.select2({
+    placeholder: "2 спальни, 2 кровати...",
+    templateResult: formatState,
+  });
+
   var dropdownApply = $(".container_ui-kit .form-elements-center-column .preview-text-field__item-input");
   var multiple = $(".container_ui-kit > ul:nth-child(1) > li:nth-child(3) > select");
   var dropdownClear = $(".container_ui-kit .form-elements-right-column .preview-text-field__item-input");
@@ -58,4 +96,13 @@ $(document).ready(function() {
     templateResult: formatState
   });
   dropdown.select2('open');
+  var dropdownIncrease = document.querySelector(".dropdown .dropdown__button:last-child");  
+  var dropdownDecrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(1) .dropdown .dropdown__button:first-child");  
+  var dropdownBedsIncrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:last-child");
+  var dropdownBedsDecrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:first-child");  
+  var placeholder = $('.select2-container .select2-search--inline .select2-search__field');
+  var newPlaceholder = placeholder[1].placeholder.split(' ')
+  console.log(dropdownBedsIncrease);
+  var parent = dropdownIncrease.parentNode;
+  var parentBeds = dropdownBedsIncrease.parentNode;
 });

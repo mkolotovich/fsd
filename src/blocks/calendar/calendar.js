@@ -16,6 +16,20 @@ let calendar = flatpickr('#flat', {
     }
   }
 });
+let calendar1 = flatpickr('#flat1', {
+  locale: Russian, // locale for this instance only
+  mode: "range",
+  nextArrow: '<i class="material-icons">arrow_forward</i>',
+  prevArrow: '<i class="material-icons">arrow_backward</i>',
+  monthSelectorType: "static",
+  onYearChange: function(selectedDates, dateStr, instance) {
+    if (calendar1.currentYear > 2019) {
+      year.style.width = 49 + 'px';
+    } else if (calendar1.currentYear <= 2019) {
+      year.style.width = 44 + 'px';
+    }
+  }
+});
 var year = document.querySelector('.flatpickr-current-month .numInputWrapper');
 var calendarBlock = document.querySelector('.flatpickr-calendar.inline');
 var buttons = document.querySelector('.buttons-list');
