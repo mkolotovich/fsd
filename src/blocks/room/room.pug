@@ -12,8 +12,8 @@ mixin room(number, name, name1, number2, name2)
           +preview-fonts(number2, name2)(class="preview-fonts__item preview-fonts__item_body")
       li.find-room__item
         ul.preview-text-field__list
-          +dropdown('прибытие', '', '19.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
-          +dropdown('выезд', '', '23.08.2019')(class="preview-text-field__item preview-text-field__item_half-width")
+          +date-picker('прибытие', '', '19.08.2019','datepicker5')(class="preview-text-field__item preview-text-field__item_half-width")
+          +date-picker('выезд', '', '23.08.2019','datepicker6')(class="preview-text-field__item preview-text-field__item_half-width")
       +dropdown('гости', '', '3 гостя')(class="preview-text-field__item")
       li.room__item
         ul.room__list

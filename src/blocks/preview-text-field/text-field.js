@@ -38,9 +38,10 @@ $(document).ready(function() {
     evt.preventDefault();
     var count = parent.children[1].textContent;
     var countBeds = parentBeds.children[1].textContent;
-    if (Number(count) === 0) {
+    if (Number(count) <= 1) {
       dropdownDecrease.style.opacity = '0.38';
-    } else if (Number(count) >= 0) {
+    } 
+    else if (Number(count) >= 0) {
       dropdownDecrease.style.opacity = '1';
     }
     dropdownIncrease.onclick = function() {
@@ -82,7 +83,8 @@ $(document).ready(function() {
   var dropdownApply = $(".container_ui-kit .form-elements-center-column .preview-text-field__item-input");
   var multiple = $(".container_ui-kit > ul:nth-child(1) > li:nth-child(3) > select");
   var dropdownClear = $(".container_ui-kit .form-elements-right-column .preview-text-field__item-input");
-  
+  var dropdownCards = $(".cards-center-column .room li:nth-child(3) .preview-text-field__item-input");
+  var multipleCards = $('.container_cards > ul.preview-text-field.preview-fonts.cards-left-column > li.cards-left-column__item.form-elements-right-column.form-elements-center-column > ul > li.preview-text-field__item > select');
   multiple.select2({
     placeholder: "Сколько гостей",
     templateResult: formatState
@@ -91,18 +93,33 @@ $(document).ready(function() {
     placeholder: "Сколько гостей",
     templateResult: formatState
   });
+  multipleCards.select2({
+    placeholder: "Сколько гостей",
+    templateResult: formatState
+  });
   dropdownClear.select2({
     placeholder: "3 гостя",
     templateResult: formatState
   });
+  dropdownCards.select2({
+    placeholder: "3 гостя",
+    templateResult: formatState
+  });
   dropdown.select2('open');
+  dropdownApply.select2('open');
   var dropdownIncrease = document.querySelector(".dropdown .dropdown__button:last-child");  
   var dropdownDecrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(1) .dropdown .dropdown__button:first-child");  
   var dropdownBedsIncrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:last-child");
   var dropdownBedsDecrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:first-child");  
   var placeholder = $('.select2-container .select2-search--inline .select2-search__field');
-  var newPlaceholder = placeholder[1].placeholder.split(' ')
-  console.log(dropdownBedsIncrease);
-  var parent = dropdownIncrease.parentNode;
-  var parentBeds = dropdownBedsIncrease.parentNode;
+  console.log(placeholder[1]);
+  if (placeholder[1] !== undefined) {
+    var newPlaceholder = placeholder[1].placeholder.split(' ')
+  }
+  if (dropdownIncrease !== null) {
+    var parent = dropdownIncrease.parentNode;
+  }
+  if (dropdownBedsIncrease !== null) {
+    var parentBeds = dropdownBedsIncrease.parentNode;
+  }
 });

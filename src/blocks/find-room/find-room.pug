@@ -2,14 +2,14 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../../blocks/preview-fonts/preview-fonts.pug
 - var withIcon = true;
-- var lessThanOne = true;
+
 mixin find-room(name, label, label1, label2)
   li(class!=attributes.class)
     ul.find-room
       +preview-fonts("", name)(class="preview-fonts__item preview-fonts__item_h1")
       li.find-room__item
         ul.preview-text-field__list
-          +dropdown('прибытие', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
-          +dropdown('выезд', '', 'ДД.ММ.ГГГГ')(class="preview-text-field__item preview-text-field__item_half-width")
+          +date-picker('прибытие', '', 'ДД.ММ.ГГГГ','datepicker3')(class="preview-text-field__item preview-text-field__item_half-width")
+          +date-picker('выезд', '', 'ДД.ММ.ГГГГ','datepicker4')(class="preview-text-field__item preview-text-field__item_half-width")
       +dropdown('гости', '', 'Сколько гостей')(class="preview-text-field__item")
       +button('подобрать номер', 'button_filled')(class="form-elements-right-column__item form-elements-right-column__item_full-width")

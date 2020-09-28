@@ -1,0 +1,30 @@
+include ../logo/logo.pug
+include ../../blocks/preview-fonts/preview-fonts.pug
+include ../button/button.pug
+- var link = true;
+- var withIcon = false;
+if logged == false
+  .nav-bar
+    .container
+      +logo({'mod': 'ui-kit', 'image':'logo.svg'})
+      ul.preview-fonts
+        +preview-fonts('', 'О нас')(class="preview-fonts__item preview-fonts__item_h3")
+        +preview-fonts('', 'Услуги')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Вакансии')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Новости')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Соглашения')(class="preview-fonts__item preview-fonts__item_body")
+      ul.nav-bar__item
+        +button('войти', 'button_bordered')
+        +button('зарегистрироваться', 'button_filled button_full-width')
+else
+  div(class="nav-bar nav-bar_logged")
+    .container
+      +logo({'mod': 'ui-kit', 'image':'logo.svg'})
+      ul.preview-fonts
+        +preview-fonts('', 'О нас')(class="preview-fonts__item preview-fonts__item_h3")
+        +preview-fonts('', 'Услуги')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Вакансии')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Новости')(class="preview-fonts__item preview-fonts__item_body")
+        +preview-fonts('', 'Соглашения')(class="preview-fonts__item preview-fonts__item_body")
+      ul.nav-bar__item
+        +preview-fonts('', 'Юлий Цезарь')(class="preview-fonts__item preview-fonts__item_body")

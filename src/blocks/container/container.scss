@@ -25,12 +25,23 @@
     display: flex;
     margin-top: 72px;
   }
+  &_cards .preview-text-field__item-input::placeholder {
+    color: $dark75;
+  }
   &_ui-kit {
     display: grid;
     grid-template-columns: 446px 392px auto;
     margin-top: 65px;
   }
+  &_headers_and_footers {
+    max-width: unset;
+    background-color: #F4F4F6;
+    padding: 0;
+  }
 }
 .container_form .flatpickr-current-month input.cur-year {
   padding: 0 0 0 0.2ch;
+}
+.container .container_headers_and_footers {
+  margin-top: 62px;
 }
