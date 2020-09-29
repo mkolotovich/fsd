@@ -1,0 +1,43 @@
+@import '~scss/variables.scss';
+.footer {
+  background-color: $white;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+}
+.footer .container {
+  max-width: 1160px;
+  display: flex;
+  padding-top: 100px;
+  justify-content: space-between;
+}
+.footer__item, .footer .container .preview-fonts:last-child {
+  max-width: 260px;
+}
+.footer__item .logo {
+  padding-top: 0;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.footer .preview-fonts__name {
+  display: none;
+}
+.footer .preview-fonts__item:nth-child(1) {
+  margin-bottom: 21px;
+}
+.footer .preview-fonts__item {
+  margin-bottom: 20px;
+}
+.footer .preview-fonts:not(:last-child) .preview-fonts__item:not(:nth-child(1)) .preview-fonts__text {
+  line-height: 17px;
+  color: $dark50;
+}
+.footer .preview-fonts__text {
+  text-decoration: none;
+}
+.footer .preview-text-field__wrap {
+  margin-bottom: 0;
+}
+.footer hr {
+  margin-top: 80px;
+  border-bottom: 0;
+  background-color: rgba(31, 32, 65, 0.1);
+}

@@ -3,27 +3,38 @@ include ../../blocks/preview-fonts/preview-fonts.pug
 include ../preview-text-field/preview-text-field.pug
 -var link = false
 .footer
-  .footer__item
-    +logo({'mod': 'ui-kit', 'image':'logo.svg'})
-    +preview-fonts('', 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»')(class="preview-fonts__item preview-fonts__item_body")
+  .container
+    .footer__item
+      +logo({'mod': 'ui-kit', 'image':'logo.svg'})
+      +preview-fonts('', 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»')(class="preview-fonts__item preview-fonts__item_body")
+    -var link = true
+    ul.preview-fonts
+      +preview-fonts('', 'навигация')(class="preview-fonts__item preview-fonts__item_h3")
+      +preview-fonts('', 'О нас')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Новости')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Служба поддержки')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Услуги')(class="preview-fonts__item preview-fonts__item_body")
+    ul.preview-fonts
+      +preview-fonts('', 'о нас')(class="preview-fonts__item preview-fonts__item_h3")
+      +preview-fonts('', 'О сервисе')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Наша команда')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Вакансии')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Инвесторы')(class="preview-fonts__item preview-fonts__item_body")
+    ul.preview-fonts
+      +preview-fonts('', 'Служба поддержки')(class="preview-fonts__item preview-fonts__item_h3")
+      +preview-fonts('', 'Соглашения')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Сообщества')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-fonts('', 'Связь с нами')(class="preview-fonts__item preview-fonts__item_body")
+    ul.preview-fonts
+      +preview-fonts('', 'Подписка')(class="preview-fonts__item preview-fonts__item_h3")
+      +preview-fonts('', 'Получайте специальные предложения и новости сервиса')(class="preview-fonts__item preview-fonts__item_body")
+      +preview-text-field('', '', 'Email')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_subscription")
+  hr
   ul.preview-fonts
-    +preview-fonts('', 'навигация')(class="preview-fonts__item preview-fonts__item_h3")
-    +preview-fonts('', 'О нас')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Новости')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Служба поддержки')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Услуги')(class="preview-fonts__item preview-fonts__item_body")
-  ul.preview-fonts
-    +preview-fonts('', 'о нас')(class="preview-fonts__item preview-fonts__item_h3")
-    +preview-fonts('', 'О сервисе')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Наша команда')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Вакансии')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Инвесторы')(class="preview-fonts__item preview-fonts__item_body")
-  ul.preview-fonts
-    +preview-fonts('', 'Служба поддержки')(class="preview-fonts__item preview-fonts__item_h3")
-    +preview-fonts('', 'Соглашения')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Сообщества')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-fonts('', 'Связь с нами')(class="preview-fonts__item preview-fonts__item_body")
-  ul.preview-fonts
-    +preview-fonts('', 'Подписка')(class="preview-fonts__item preview-fonts__item_h3")
-    +preview-fonts('', 'Получайте специальные предложения и новости сервиса')(class="preview-fonts__item preview-fonts__item_body")
-    +preview-text-field('subscription text field', '', 'Email')(class="preview-text-field__item preview-text-field__item_two-third-width preview-text-field__item_subscription")
+    +preview-fonts('', 'Copyright © 2018 Toxin отель. Все права зачищены.')(class="preview-fonts__item preview-fonts__item_body")
+    li
+      i(class="fab fa-twitter")
+    li
+      i(class="fab fa-facebook-square")
+    li
+      i(class="fab fa-instagram")
