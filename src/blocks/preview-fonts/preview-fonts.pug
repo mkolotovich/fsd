@@ -3,6 +3,8 @@ mixin preview-fonts(name, text)
     if link == true
       a(href="").preview-fonts__text!= text
       i(class='material-icons') expand_more
+    else if link === 'withOutIcon'
+      a(href="").preview-fonts__text!= text
     else
       .preview-fonts__name= name
       .preview-fonts__text!= text

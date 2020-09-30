@@ -112,7 +112,6 @@ $(document).ready(function() {
   var dropdownBedsIncrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:last-child");
   var dropdownBedsDecrease = document.querySelector("body > span:nth-child(6) .select2-results__options li:nth-child(2) .dropdown .dropdown__button:first-child");  
   var placeholder = $('.select2-container .select2-search--inline .select2-search__field');
-  console.log(placeholder[1]);
   if (placeholder[1] !== undefined) {
     var newPlaceholder = placeholder[1].placeholder.split(' ')
   }
