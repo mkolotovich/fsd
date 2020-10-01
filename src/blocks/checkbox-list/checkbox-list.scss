@@ -1,19 +1,8 @@
 @import '~scss/variables.scss';
 @import '~scss/mixins.scss';
-.preview-text-field__item_checkbox-list .preview-text-field__wrap {
-  min-height: 44px;
-  align-items: center;
-}
-.preview-text-field__item_checkbox-list-open .material-icons {
-  top: 0;
-  transform: rotate(180deg);
-}
 .checkbox-list {
   list-style: none;
   display: none;
-}
-.preview-text-field__item_checkbox-list-open .checkbox-list {
-  display: block;
 }
 .checkbox-list input {
   display: none;

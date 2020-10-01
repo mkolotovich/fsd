@@ -122,3 +122,37 @@
 .preview-text-field__item:nth-child(12) {
   margin-bottom: 131px;
 }
+.preview-text-field__item_checkbox-list-open .material-icons {
+  top: 0;
+  transform: rotate(180deg);
+}
+.preview-text-field__item_checkbox-list-open .checkbox-list {
+  display: block;
+}
+.preview-text-field__item_two-third-width > label {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark;
+  font-weight: bold;
+  min-height: 44px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.preview-text-field__item_checkbox-list-open > label {
+  flex-direction: column;
+  align-items: unset;
+  padding-top: 14px;
+}
+.preview-text-field__item_checkbox-list-open .checkbox-list {
+  margin-top: 15px;
+}
+.preview-text-field__item_two-third-width > label .checkbox-list label {
+  text-transform: none;
+  font-weight: normal;
+}
+.preview-text-field__item_two-third-width > label > input, .preview-text-field__item_two-third-width > label > input:checked + ul {
+  display: none;
+}

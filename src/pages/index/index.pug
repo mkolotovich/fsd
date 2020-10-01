@@ -1,9 +1,8 @@
-.pages
-  .page
-    a(href='colors-type.html') Color & type
-  .page
-    a(href='form-elements.html') Form Elements
-  .page
-    a(href='cards.html') Cards
-  .page
-    a(href='headers_and_footers.html') Headers & Footers
+extends ../../layouts/landing-page-layout.pug
+
+block title
+  | Landing page
+block content
+  - var logged = false
+  include ../../blocks/nav-bar/nav-bar.pug
+  include ../../blocks/promo/promo.pug

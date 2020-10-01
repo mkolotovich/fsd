@@ -25,6 +25,13 @@
     display: flex;
     margin-top: 72px;
   }
+  &_landing-page {
+    max-width: unset;
+    padding: 0;
+  }
+  &_landing-page .nav-bar {
+    margin-bottom: 0;
+  }
   &_cards .preview-text-field__item-input::placeholder {
     color: $dark75;
   }
